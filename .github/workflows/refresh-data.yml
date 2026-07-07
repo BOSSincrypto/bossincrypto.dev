@@ -1,0 +1,49 @@
+name: Refresh GitHub Data
+
+# Placeholder workflow — runs every 6 hours to refresh project data.
+# The data:refresh script will be implemented by the data-layer feature.
+on:
+  schedule:
+    # Every 6 hours at minute 0
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh repos.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.8.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Fetch fresh data from GitHub API
+        run: pnpm run data:refresh
+
+      - name: Commit if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain src/data/repos.json)" ]; then
+            git add src/data/repos.json
+            git commit -m "chore: refresh project data [skip ci]"
+            git push
+          else
+            echo "No data changes to commit."
+          fi

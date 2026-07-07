@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+ * Custom terminal theme — Tailwind CSS 4 uses the @theme directive
+ * to define design tokens that auto-generate utility classes.
+ * e.g. --color-terminal-green generates text-terminal-green, bg-terminal-green, etc.
+ */
+@theme {
+  --color-terminal-green: #00ff41;
+  --color-terminal-amber: #ffb000;
+  --color-terminal-cyan: #00e5ff;
+  --color-terminal-bg: #0a0a0a;
+  --color-terminal-dim: #333333;
+  --color-terminal-text: #c0c0c0;
+  --color-terminal-red: #ff0040;
+
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-terminal-bg);
+  color: var(--color-terminal-text);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
