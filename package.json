@@ -18,7 +18,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "typecheck": "tsc --noEmit",
-    "data:refresh": "node -e \"console.log('[data:refresh] placeholder - implementation pending')\""
+    "data:refresh": "node scripts/fetch-repos.ts"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.8",
