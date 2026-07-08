@@ -1,11 +1,13 @@
 import { useCallback, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import TerminalHeader from "./components/TerminalHeader";
+import ProjectGrid from "./components/ProjectGrid";
 import BootSequence from "./components/BootSequence";
 import ScanlineOverlay from "./components/effects/ScanlineOverlay";
 import SettingsPanel, {
   type SettingsKey,
 } from "./components/SettingsPanel";
+import { useProjects } from "./hooks/useProjects";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 import { DEFAULT_SETTINGS, type SettingsState } from "./types";
@@ -24,6 +26,7 @@ import { DEFAULT_SETTINGS, type SettingsState } from "./types";
  */
 export default function App() {
   const reducedMotion = useReducedMotion();
+  const { groups, loading } = useProjects();
   const [booted, setBooted] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [settings, setSettings] = useLocalStorage<SettingsState>(
@@ -87,6 +90,22 @@ export default function App() {
             <TerminalHeader />
           </div>
         </div>
+
+        {/* Project hub — wider container so the grid can use >=3 columns */}
+        <section
+          data-testid="project-hub"
+          className="mx-auto mt-8 w-full max-w-7xl px-4 sm:px-6"
+          aria-label="Projects"
+        >
+          <div className="mb-4 font-mono text-sm text-terminal-cyan">
+            <span className="text-terminal-amber">$</span> ls ~/projects
+          </div>
+          <ProjectGrid
+            groups={groups}
+            loading={loading}
+            reducedMotion={reducedMotion}
+          />
+        </section>
       </main>
 
       {/* Settings panel — toggleable effect controls (VAL-BOOT-007, VAL-BOOT-013) */}

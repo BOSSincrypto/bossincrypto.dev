@@ -221,3 +221,45 @@
     animation: none;
   }
 }
+
+/* ================================================================
+ * Project Card — hover glitch on title (VAL-PROJ-008, VAL-PROJ-013)
+ * ================================================================ */
+
+/*
+ * On card hover the title gets an RGB-split (red/cyan) text-shadow plus a
+ * subtle micro-jitter to evoke a CRT glitch. The effect only applies while
+ * the `.group` card is hovered and reverts on mouse leave. Reduced-motion
+ * users get no glitch transform/shadow.
+ */
+.group:hover .card-glitch {
+  text-shadow: 2px 0 var(--color-terminal-red), -2px 0 var(--color-terminal-cyan);
+  animation: card-glitch 0.35s steps(2, end) infinite;
+}
+
+@keyframes card-glitch {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1px, 1px);
+  }
+  50% {
+    transform: translate(1px, -1px);
+  }
+  75% {
+    transform: translate(-1px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Reduced motion: no glitch transform or RGB split (VAL-PROJ-013) */
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .card-glitch {
+    animation: none;
+    text-shadow: none;
+  }
+}
+
