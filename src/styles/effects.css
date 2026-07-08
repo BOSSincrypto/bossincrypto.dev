@@ -41,3 +41,183 @@
     animation: none;
   }
 }
+
+/* ================================================================
+ * CRT Scanline Overlay (VAL-BOOT-004)
+ * ================================================================ */
+
+/*
+ * A fixed full-viewport overlay of horizontal CRT scanlines.
+ * `pointer-events: none` ensures it never blocks interaction with
+ * foreground content. The scanlines slowly drift downward to simulate
+ * a real CRT monitor refresh.
+ */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  animation: scanline-scroll 8s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes scanline-scroll {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 100vh;
+  }
+}
+
+/* Reduced motion: freeze scanlines, don't scroll (VAL-BOOT-011) */
+@media (prefers-reduced-motion: reduce) {
+  .scanline-overlay {
+    animation: none;
+  }
+}
+
+/* ================================================================
+ * CRT Power-On / Boot Overlay (VAL-BOOT-001)
+ * ================================================================ */
+
+/*
+ * Full-screen black overlay shown during the boot sequence.
+ * Has a high z-index so it covers all content while booting.
+ */
+.boot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--color-terminal-bg);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*
+ * CRT power-on: the screen expands from a thin horizontal line to full
+ * height, simulating an old CRT monitor warming up.
+ */
+.crt-power-on {
+  animation: crt-power-on 0.6s ease-out forwards;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+@keyframes crt-power-on {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+    opacity: 0;
+  }
+  20% {
+    transform: scaleY(0.005) scaleX(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+}
+
+/*
+ * A moving scan band that sweeps down during boot, enhancing the CRT feel.
+ */
+.crt-scan-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 255, 65, 0.04),
+    transparent
+  );
+  animation: crt-scan-sweep 1.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes crt-scan-sweep {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+/* Reduced motion: skip the power-on animation, show content instantly */
+@media (prefers-reduced-motion: reduce) {
+  .crt-power-on {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .crt-scan-band {
+    display: none;
+  }
+}
+
+/* ================================================================
+ * Boot text line entrance
+ * ================================================================ */
+
+@keyframes boot-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.boot-line {
+  animation: boot-line-in 0.15s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-line {
+    animation: none;
+  }
+}
+
+/* ================================================================
+ * Settings Panel
+ * ================================================================ */
+
+/*
+ * The settings panel slides in from the right edge.
+ * Uses a transform for GPU acceleration.
+ */
+.settings-panel-enter {
+  animation: settings-slide-in 0.2s ease-out;
+}
+
+@keyframes settings-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-panel-enter {
+    animation: none;
+  }
+}

@@ -121,3 +121,27 @@ export interface FilterState {
   includeForks: boolean;
   sortBy: SortOption;
 }
+
+/**
+ * User-configurable visual/audio effect settings.
+ *
+ * Persisted to localStorage via `useLocalStorage`. `reducedMotion` is NOT
+ * included here because it is an OS/browser preference detected via the
+ * `prefers-reduced-motion` media query (see `useReducedMotion`), not a
+ * user-facing toggle.
+ */
+export interface SettingsState {
+  /** CRT scanline overlay on/off. */
+  scanlines: boolean;
+  /** Matrix rain background on/off (placeholder toggle — effect in later milestone). */
+  matrixRain: boolean;
+  /** Sound effects on/off (placeholder toggle — effect in later milestone). */
+  sound: boolean;
+}
+
+/** Default settings: scanlines on, matrix rain and sound off. */
+export const DEFAULT_SETTINGS: SettingsState = {
+  scanlines: true,
+  matrixRain: false,
+  sound: false,
+};
