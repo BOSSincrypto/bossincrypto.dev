@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/700.css";
 import "./styles/globals.css";
+import "./styles/effects.css";
 import App from "./App";
 
 const rootElement = document.getElementById("root");

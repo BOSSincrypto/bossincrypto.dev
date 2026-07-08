@@ -1,0 +1,43 @@
+/*
+ * Terminal effect styles.
+ *
+ * CSS animations and effects that cannot be expressed as Tailwind utilities
+ * (scanlines, matrix, glitch, CRT, cursor blink) live here. Imported once in
+ * main.tsx so they are globally available.
+ */
+
+/*
+ * Blinking terminal cursor.
+ *
+ * The cursor is a decorative block that toggles opacity so it appears to blink
+ * continuously. `animation-iteration-count: infinite` keeps it blinking for the
+ * life of the page (per VAL-BOOT-010). The step-end timing gives a hard on/off
+ * toggle rather than a smooth fade, matching a real CRT terminal cursor.
+ */
+@keyframes terminal-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  background-color: var(--color-terminal-green);
+  animation: terminal-blink 1s step-end infinite;
+  will-change: opacity;
+}
+
+/*
+ * When the user prefers reduced motion, freeze the cursor in its visible state
+ * instead of blinking. The element remains present and legible.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .terminal-cursor {
+    animation: none;
+  }
+}
