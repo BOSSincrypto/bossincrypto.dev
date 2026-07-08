@@ -31,7 +31,7 @@ export interface BootSequenceProps {
  *
  * Skip methods (VAL-BOOT-003):
  * - Click anywhere on the overlay
- * - Press Escape or Enter (global keyboard listener)
+ * - Press Escape, Enter, or Space (global keyboard listener)
  * - Click the visible skip button
  *
  * The overlay is `aria-hidden="true"` because it is purely decorative
@@ -62,12 +62,13 @@ export default function BootSequence({
     }
   }, [state]);
 
-  // Global keyboard skip: Escape or Enter while boot is playing.
+  // Global keyboard skip: Escape, Enter, or Space while boot is playing.
   useEffect(() => {
     if (state === "complete") return;
 
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape" || e.key === "Enter") {
+      if (e.key === "Escape" || e.key === "Enter" || e.key === " ") {
+        // preventDefault guards against page scroll when Space is pressed
         e.preventDefault();
         skip();
       }

@@ -66,9 +66,9 @@ export default function App() {
         <div className="mx-auto w-full max-w-4xl">
           <motion.div
             className="text-sm text-terminal-cyan"
-            initial={{ opacity: 0 }}
+            initial={reducedMotion ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
+            transition={reducedMotion ? { duration: 0 } : { duration: 0.4 }}
           >
             <span className="text-terminal-amber">$</span>{" "}
             <span>BOSSincrypto.dev</span>

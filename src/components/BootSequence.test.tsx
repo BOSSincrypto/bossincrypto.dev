@@ -91,6 +91,29 @@ describe("BootSequence", () => {
       expect(screen.queryByTestId("boot-overlay")).toBeNull();
     });
 
+    it("skips via pressing Space (VAL-BOOT-003)", () => {
+      render(<BootSequence reducedMotion={false} />);
+      expect(screen.getByTestId("boot-overlay")).toBeInTheDocument();
+
+      act(() => {
+        fireEvent.keyDown(window, { key: " " });
+      });
+
+      expect(screen.queryByTestId("boot-overlay")).toBeNull();
+    });
+
+    it("Space key calls preventDefault to guard against page scroll", () => {
+      render(<BootSequence reducedMotion={false} />);
+
+      let event: KeyboardEvent;
+      act(() => {
+        event = new KeyboardEvent("keydown", { key: " ", bubbles: true });
+        const spy = vi.spyOn(event, "preventDefault");
+        window.dispatchEvent(event);
+        expect(spy).toHaveBeenCalled();
+      });
+    });
+
     it("clicking the skip button triggers skip", () => {
       render(<BootSequence reducedMotion={false} />);
       const skipButton = screen.getByText(/skip/i);
