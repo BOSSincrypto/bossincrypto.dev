@@ -4,6 +4,7 @@ import TerminalHeader from "./components/TerminalHeader";
 import StatsBar from "./components/StatsBar";
 import ControlBar from "./components/ControlBar";
 import ProjectGrid from "./components/ProjectGrid";
+import ProjectDetail from "./components/ProjectDetail";
 import BootSequence from "./components/BootSequence";
 import ScanlineOverlay from "./components/effects/ScanlineOverlay";
 import SettingsPanel, {
@@ -12,7 +13,7 @@ import SettingsPanel, {
 import { useProjects } from "./hooks/useProjects";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { useReducedMotion } from "./hooks/useReducedMotion";
-import { DEFAULT_SETTINGS, type SettingsState } from "./types";
+import { DEFAULT_SETTINGS, type SettingsState, type Project } from "./types";
 
 /**
  * App — root component.
@@ -58,6 +59,27 @@ export default function App() {
   );
 
   const settingsBtnRef = useRef<HTMLButtonElement>(null);
+
+  // ── Detail modal state ──────────────────────────────
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  // Track the card element that opened the modal for focus return (VAL-PROJ-017)
+  const cardTriggerRef = useRef<HTMLElement | null>(null);
+
+  const handleCardClick = useCallback((project: Project) => {
+    // Remember the active element (the card that was clicked/focused)
+    cardTriggerRef.current = document.activeElement as HTMLElement | null;
+    setSelectedProject(project);
+  }, []);
+
+  const handleModalClose = useCallback(() => {
+    setSelectedProject(null);
+    // Return focus to the card that opened the modal (VAL-PROJ-017)
+    // Use setTimeout so the modal has unmounted before we try to focus
+    setTimeout(() => {
+      cardTriggerRef.current?.focus();
+      cardTriggerRef.current = null;
+    }, 0);
+  }, []);
 
   const handleToggle = useCallback(
     (key: SettingsKey) => {
@@ -148,6 +170,7 @@ export default function App() {
             groups={showEmptyState ? [] : filteredGroups}
             loading={loading}
             reducedMotion={reducedMotion}
+            onCardClick={handleCardClick}
           />
 
           {/* Empty state when no results match (VAL-PROJ-020) */}
@@ -175,6 +198,13 @@ export default function App() {
           )}
         </section>
       </main>
+
+      {/* Project detail modal — AnimatePresence handles enter/exit animations (VAL-PROJ-014..018) */}
+      <ProjectDetail
+        project={selectedProject}
+        onClose={handleModalClose}
+        reducedMotion={reducedMotion}
+      />
 
       {/* Settings panel — toggleable effect controls (VAL-BOOT-007, VAL-BOOT-013) */}
       <SettingsPanel
