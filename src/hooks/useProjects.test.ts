@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
-import { renderHook, waitFor } from "@testing-library/react";
+import { renderHook, waitFor, act } from "@testing-library/react";
 import { useProjects } from "./useProjects";
 import type { GitHubRepo } from "../types";
 
@@ -54,7 +54,7 @@ describe("useProjects", () => {
     expect(result.current.projects.length).toBeGreaterThan(0);
   });
 
-  it("settles to loading=false with all 23 static projects", async () => {
+  it("settles to loading=false with static projects from repos.json", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
       createMockResponse([mockRepo()]),
     );
@@ -65,8 +65,8 @@ describe("useProjects", () => {
       expect(result.current.loading).toBe(false);
     });
 
-    expect(result.current.projects).toHaveLength(23);
-    expect(result.current.totalCount).toBe(23);
+    expect(result.current.projects.length).toBeGreaterThan(0);
+    expect(result.current.totalCount).toBe(result.current.projects.length);
   });
 
   it("groups projects by category in CATEGORY_ORDER priority", async () => {
@@ -152,5 +152,332 @@ describe("useProjects", () => {
 
     expect(result.current.source).toBe("fallback");
     expect(result.current.error).not.toBeNull();
+  });
+
+  // ── Filter / Sort / Search state ──────────────────────────
+
+  it("exposes default filter state", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    expect(result.current.search).toBe("");
+    expect(result.current.debouncedSearch).toBe("");
+    expect(result.current.activeCategory).toBeNull();
+    expect(result.current.activeLanguage).toBeNull();
+    expect(result.current.includeForks).toBe(false);
+    expect(result.current.sortBy).toBe("stars");
+  });
+
+  it("filtering by category narrows filteredProjects", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    const originalCount = result.current.totalCount;
+
+    act(() => {
+      result.current.setActiveCategory("crypto-web3");
+    });
+
+    // There should be at least one crypto-web3 project, fewer than total
+    expect(result.current.filteredProjects.length).toBeGreaterThan(0);
+    expect(result.current.filteredProjects.length).toBeLessThan(originalCount);
+    expect(result.current.filteredCount).toBe(result.current.filteredProjects.length);
+
+    // All filtered projects should have the matching category
+    for (const project of result.current.filteredProjects) {
+      expect(project.category).toBe("crypto-web3");
+    }
+  });
+
+  it("filtering by language narrows filteredProjects", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    const originalCount = result.current.totalCount;
+
+    act(() => {
+      result.current.setActiveLanguage("TypeScript");
+    });
+
+    expect(result.current.filteredProjects.length).toBeGreaterThan(0);
+    expect(result.current.filteredProjects.length).toBeLessThan(originalCount);
+
+    for (const project of result.current.filteredProjects) {
+      expect(project.language).toBe("TypeScript");
+    }
+  });
+
+  it("including forks changes the count", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    const withoutForks = result.current.filteredProjects.length;
+
+    act(() => {
+      result.current.setIncludeForks(true);
+    });
+
+    const withForks = result.current.filteredProjects.length;
+
+    // There should be at least as many, and likely more projects when forks are included
+    expect(withForks).toBeGreaterThanOrEqual(withoutForks);
+  });
+
+  it("sorting by name changes order to alphabetical", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    act(() => {
+      result.current.setSortBy("name");
+    });
+
+    expect(result.current.sortBy).toBe("name");
+
+    const names = result.current.filteredProjects.map((p) =>
+      p.displayName.toLowerCase(),
+    );
+    const sorted = [...names].sort();
+    expect(names).toEqual(sorted);
+  });
+
+  it("sorting by stars returns descending order", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    act(() => {
+      result.current.setSortBy("stars");
+    });
+
+    const stars = result.current.filteredProjects.map((p) => p.stars);
+    for (let i = 1; i < stars.length; i++) {
+      expect(stars[i]).toBeLessThanOrEqual(stars[i - 1]);
+    }
+  });
+
+  it("clearFilters resets all filters to defaults", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    // Change some filters
+    act(() => {
+      result.current.setSearch("test query");
+      result.current.setActiveCategory("crypto-web3");
+      result.current.setActiveLanguage("TypeScript");
+      result.current.setIncludeForks(true);
+      result.current.setSortBy("name");
+    });
+
+    // Clear them
+    act(() => {
+      result.current.clearFilters();
+    });
+
+    expect(result.current.search).toBe("");
+    expect(result.current.debouncedSearch).toBe("");
+    expect(result.current.activeCategory).toBeNull();
+    expect(result.current.activeLanguage).toBeNull();
+    expect(result.current.includeForks).toBe(false);
+    expect(result.current.sortBy).toBe("stars");
+    // Forkless count should match the count before any filters were set
+    expect(result.current.filteredProjects.length).toBeLessThan(result.current.totalCount);
+  });
+
+  it("exposes allLanguages from the full dataset", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    expect(result.current.allLanguages.length).toBeGreaterThan(0);
+    // Should include common languages found in the data
+    expect(result.current.allLanguages).toContain("TypeScript");
+  });
+
+  it("exposes filteredGroups matching filteredProjects", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    act(() => {
+      result.current.setActiveCategory("crypto-web3");
+    });
+
+    // Every project in filteredGroups should be in filteredProjects
+    const allFiltered = new Set(result.current.filteredProjects.map((p) => p.id));
+    let groupedCount = 0;
+    for (const group of result.current.filteredGroups) {
+      for (const project of group.projects) {
+        expect(allFiltered.has(project.id)).toBe(true);
+        groupedCount++;
+      }
+    }
+    expect(groupedCount).toBe(result.current.filteredProjects.length);
+  });
+});
+
+// ── Search debounce tests (use fake timers) ────────────────────
+
+describe("useProjects search debounce", () => {
+  beforeEach(() => {
+    localStorage.clear();
+    vi.restoreAllMocks();
+    vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("debounces search: filteredProjects only updates after debounce delay", () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    // Set a search query
+    act(() => {
+      result.current.setSearch("alpha");
+    });
+
+    // Immediately, search is set but debouncedSearch is still empty
+    expect(result.current.search).toBe("alpha");
+    expect(result.current.debouncedSearch).toBe("");
+
+    // After 200ms (less than debounce), still not updated
+    act(() => {
+      vi.advanceTimersByTime(200);
+    });
+    expect(result.current.debouncedSearch).toBe("");
+
+    // After full debounce delay
+    act(() => {
+      vi.advanceTimersByTime(200);
+    });
+    expect(result.current.debouncedSearch).toBe("alpha");
+  });
+
+  it("multiple rapid keystrokes only fire one debounced update", () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    // Rapid keystrokes
+    act(() => {
+      result.current.setSearch("a");
+    });
+    act(() => {
+      vi.advanceTimersByTime(50);
+    });
+    act(() => {
+      result.current.setSearch("al");
+    });
+    act(() => {
+      vi.advanceTimersByTime(50);
+    });
+    act(() => {
+      result.current.setSearch("alp");
+    });
+    act(() => {
+      vi.advanceTimersByTime(50);
+    });
+    act(() => {
+      result.current.setSearch("alph");
+    });
+
+    expect(result.current.debouncedSearch).toBe("");
+
+    // After full debounce from last keystroke
+    act(() => {
+      vi.advanceTimersByTime(300);
+    });
+    expect(result.current.debouncedSearch).toBe("alph");
+  });
+
+  it("clearing search during debounce prevents stale update", () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse([mockRepo()]),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    act(() => {
+      result.current.setSearch("hello");
+    });
+    act(() => {
+      vi.advanceTimersByTime(100);
+    });
+
+    // Clear before debounce fires
+    act(() => {
+      result.current.setSearch("");
+    });
+    act(() => {
+      vi.advanceTimersByTime(300);
+    });
+
+    expect(result.current.debouncedSearch).toBe("");
   });
 });

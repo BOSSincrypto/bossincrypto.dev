@@ -1,6 +1,8 @@
 import { useCallback, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import TerminalHeader from "./components/TerminalHeader";
+import StatsBar from "./components/StatsBar";
+import ControlBar from "./components/ControlBar";
 import ProjectGrid from "./components/ProjectGrid";
 import BootSequence from "./components/BootSequence";
 import ScanlineOverlay from "./components/effects/ScanlineOverlay";
@@ -16,17 +18,38 @@ import { DEFAULT_SETTINGS, type SettingsState } from "./types";
  * App — root component.
  *
  * Renders the terminal shell with the CRT boot sequence, scanline overlay,
- * settings panel, and the TerminalHeader identity block.
+ * settings panel, stats bar, search/filter/sort controls, and the project
+ * grid.
  *
  * - BootSequence plays once on first visit (localStorage `boot-seen`), then
  *   the main content is revealed.
- * - ScanlineOverlay is a fixed full-viewport CRT effect, toggleable via the
- *   settings panel.
- * - SettingsPanel persists effect toggles in localStorage via useLocalStorage.
+ * - ScanlineOverlay is a fixed full-viewport CRT effect.
+ * - StatsBar shows animated count-up aggregates (total repos, stars, etc.).
+ * - ControlBar provides search, category/language/fork filters, sort, and
+ *   a clear/reset button.
+ * - ProjectGrid renders the filtered + sorted projects.
  */
 export default function App() {
   const reducedMotion = useReducedMotion();
-  const { groups, loading } = useProjects();
+  const {
+    projects,
+    loading,
+    filteredGroups,
+    filteredCount,
+    totalCount,
+    search,
+    setSearch,
+    activeCategory,
+    setActiveCategory,
+    activeLanguage,
+    setActiveLanguage,
+    allLanguages,
+    includeForks,
+    setIncludeForks,
+    sortBy,
+    setSortBy,
+    clearFilters,
+  } = useProjects();
   const [booted, setBooted] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [settings, setSettings] = useLocalStorage<SettingsState>(
@@ -48,6 +71,9 @@ export default function App() {
     // Return focus to the settings trigger (VAL-BOOT-013).
     settingsBtnRef.current?.focus();
   }, []);
+
+  // Show empty state when filters yield zero results (VAL-PROJ-020)
+  const showEmptyState = !loading && filteredCount === 0;
 
   return (
     <>
@@ -91,20 +117,62 @@ export default function App() {
           </div>
         </div>
 
+        {/* Stats bar (VAL-SEARCH-018) — animated count-up aggregates */}
+        <StatsBar projects={projects} reducedMotion={reducedMotion} />
+
+        {/* Control bar (VAL-SEARCH-001..017) — search, filter, sort */}
+        <ControlBar
+          search={search}
+          onSearchChange={setSearch}
+          activeCategory={activeCategory}
+          onCategoryChange={setActiveCategory}
+          activeLanguage={activeLanguage}
+          onLanguageChange={setActiveLanguage}
+          allLanguages={allLanguages}
+          includeForks={includeForks}
+          onIncludeForksChange={setIncludeForks}
+          sortBy={sortBy}
+          onSortChange={setSortBy}
+          onClear={clearFilters}
+          filteredCount={filteredCount}
+          totalCount={totalCount}
+        />
+
         {/* Project hub — wider container so the grid can use >=3 columns */}
         <section
           data-testid="project-hub"
-          className="mx-auto mt-8 w-full max-w-7xl px-4 sm:px-6"
+          className="mx-auto mt-6 w-full max-w-7xl px-4 sm:px-6"
           aria-label="Projects"
         >
-          <div className="mb-4 font-mono text-sm text-terminal-cyan">
-            <span className="text-terminal-amber">$</span> ls ~/projects
-          </div>
           <ProjectGrid
-            groups={groups}
+            groups={showEmptyState ? [] : filteredGroups}
             loading={loading}
             reducedMotion={reducedMotion}
           />
+
+          {/* Empty state when no results match (VAL-PROJ-020) */}
+          {showEmptyState && (
+            <div
+              data-testid="empty-state"
+              className="mt-8 flex flex-col items-center gap-3 rounded border border-terminal-green/20 bg-terminal-green/5 px-6 py-10 text-center font-mono"
+            >
+              <span className="text-2xl text-terminal-dim" aria-hidden="true">
+                &gt;_ no matches found
+              </span>
+              <p className="text-sm text-terminal-dim/70">
+                No projects match the current filters. Try adjusting your
+                search, category, or language selection.
+              </p>
+              <button
+                type="button"
+                onClick={clearFilters}
+                aria-label="Clear all filters"
+                className="mt-2 rounded border border-terminal-cyan/30 px-3 py-1.5 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+              >
+                <span className="text-terminal-green">$</span> clear filters
+              </button>
+            </div>
+          )}
         </section>
       </main>
 
