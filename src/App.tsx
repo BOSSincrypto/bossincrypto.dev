@@ -1,16 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import TerminalHeader from "./components/TerminalHeader";
 import StatsBar from "./components/StatsBar";
 import ControlBar from "./components/ControlBar";
 import ProjectGrid from "./components/ProjectGrid";
-import ProjectDetail from "./components/ProjectDetail";
-import BootSequence from "./components/BootSequence";
 import ScanlineOverlay from "./components/effects/ScanlineOverlay";
-import MatrixRain from "./components/effects/MatrixRain";
-import SettingsPanel, {
-  type SettingsKey,
-} from "./components/SettingsPanel";
 import { useProjects } from "./hooks/useProjects";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { useReducedMotion } from "./hooks/useReducedMotion";
@@ -20,6 +14,20 @@ import {
   playBeep,
 } from "./services/SoundService";
 import { DEFAULT_SETTINGS, type SettingsState, type Project } from "./types";
+
+// ── Lazy-loaded non-critical components ─────────────
+// These are not needed for the initial render and are
+// code-split to keep the main bundle lean (< 200KB gzipped).
+const BootSequence = lazy(() => import("./components/BootSequence"));
+const MatrixRain = lazy(() => import("./components/effects/MatrixRain"));
+const SettingsPanel = lazy(() => import("./components/SettingsPanel"));
+import type { SettingsKey } from "./components/SettingsPanel";
+const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
+
+// Shared fallback for lazy boundaries (empty — nothing renders until loaded)
+function LazyFallback() {
+  return null;
+}
 
 /**
  * App — root component.
@@ -139,14 +147,18 @@ export default function App() {
       <ScanlineOverlay visible={settings.scanlines} />
 
       {/* Matrix rain — canvas background, z-index 0, aria-hidden (VAL-BOOT-005, VAL-BOOT-014) */}
-      <MatrixRain visible={settings.matrixRain} reducedMotion={reducedMotion} />
+      <Suspense fallback={<LazyFallback />}>
+        <MatrixRain visible={settings.matrixRain} reducedMotion={reducedMotion} />
+      </Suspense>
 
       {/* Boot sequence — plays once on first visit (VAL-BOOT-001..003) */}
       {!booted && (
-        <BootSequence
-          reducedMotion={reducedMotion}
-          onComplete={() => setBooted(true)}
-        />
+        <Suspense fallback={<LazyFallback />}>
+          <BootSequence
+            reducedMotion={reducedMotion}
+            onComplete={() => setBooted(true)}
+          />
+        </Suspense>
       )}
 
       <main className="relative z-10 min-h-screen bg-terminal-bg font-mono text-terminal-green p-4 sm:p-8">
@@ -239,19 +251,23 @@ export default function App() {
       </main>
 
       {/* Project detail modal — AnimatePresence handles enter/exit animations (VAL-PROJ-014..018) */}
-      <ProjectDetail
-        project={selectedProject}
-        onClose={handleModalClose}
-        reducedMotion={reducedMotion}
-      />
+      <Suspense fallback={<LazyFallback />}>
+        <ProjectDetail
+          project={selectedProject}
+          onClose={handleModalClose}
+          reducedMotion={reducedMotion}
+        />
+      </Suspense>
 
       {/* Settings panel — toggleable effect controls (VAL-BOOT-007, VAL-BOOT-013) */}
-      <SettingsPanel
-        open={settingsOpen}
-        settings={settings}
-        onToggle={handleToggle}
-        onClose={handleSettingsClose}
-      />
+      <Suspense fallback={<LazyFallback />}>
+        <SettingsPanel
+          open={settingsOpen}
+          settings={settings}
+          onToggle={handleToggle}
+          onClose={handleSettingsClose}
+        />
+      </Suspense>
     </>
   );
 }
