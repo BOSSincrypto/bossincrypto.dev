@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useBootSequence } from "../hooks/useBootSequence";
+import { playTyping } from "../services/SoundService";
 
 /**
  * Boot text lines printed progressively during the CRT power-on sequence.
@@ -54,6 +55,15 @@ export default function BootSequence({
   const onCompleteRef = useRef(onComplete);
   onCompleteRef.current = onComplete;
   const firedRef = useRef(false);
+
+  // Play a typing click sound each time a new boot line appears.
+  const prevLinesRef = useRef(visibleLines);
+  useEffect(() => {
+    if (visibleLines > prevLinesRef.current && state !== "complete") {
+      playTyping(reducedMotion);
+    }
+    prevLinesRef.current = visibleLines;
+  }, [visibleLines, state, reducedMotion]);
 
   useEffect(() => {
     if (state === "complete" && !firedRef.current) {

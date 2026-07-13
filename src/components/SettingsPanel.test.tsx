@@ -60,16 +60,11 @@ describe("SettingsPanel", () => {
       );
     });
 
-    it("marks matrix rain and sound toggles as placeholder (coming soon)", () => {
+    it("does not mark any toggle as placeholder (all toggles are active)", () => {
       renderPanel();
-      const matrix = screen.getByRole("switch", { name: /matrix/i });
-      const sound = screen.getByRole("switch", { name: /sound/i });
-      // Placeholder text should be visible so users know it's not active yet
-      const placeholders = screen.getAllByText(/coming soon/i);
-      expect(placeholders).toHaveLength(2);
-      // Both should still be focusable toggle controls
-      expect(matrix).toBeInTheDocument();
-      expect(sound).toBeInTheDocument();
+      // No "coming soon" labels should be present since all features are implemented
+      const placeholders = screen.queryAllByText(/coming soon/i);
+      expect(placeholders).toHaveLength(0);
     });
   });
 

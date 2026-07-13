@@ -263,3 +263,123 @@
   }
 }
 
+/* ================================================================
+ * Matrix Rain Canvas (VAL-BOOT-005)
+ * ================================================================ */
+
+/*
+ * The matrix canvas is a fixed full-viewport background layer sitting
+ * behind all content (z-index: 0). pointer-events: none so it never
+ * blocks interaction with foreground elements. The canvas is hidden
+ * from assistive tech via aria-hidden on the element.
+ */
+.matrix-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================================================================
+ * GlitchText — reusable glitch text component (VAL-BOOT-008, VAL-BOOT-009)
+ * ================================================================ */
+
+/*
+ * "hover" mode — RGB-split text-shadow triggers on hover, with a
+ * micro-jitter animation. Designed for interactive elements like
+ * project cards and links.
+ */
+.glitch-hover {
+  transition: text-shadow 0.15s ease-out;
+}
+
+.glitch-hover:hover {
+  text-shadow: 2px 0 var(--color-terminal-red), -2px 0 var(--color-terminal-cyan);
+  animation: glitch-text-jitter 0.3s steps(2, end) infinite;
+}
+
+@keyframes glitch-text-jitter {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1.5px, 0.5px);
+  }
+  50% {
+    transform: translate(1.5px, -0.5px);
+  }
+  75% {
+    transform: translate(-0.5px, 1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/*
+ * "static" mode — layered text-shadow gives a perpetual CRT glow
+ * aesthetic. A slow periodic glitch keyframe runs every ~5s for a
+ * momentary digital-artifact look. Text remains fully legible.
+ */
+.glitch-static {
+  text-shadow:
+    1px 0 var(--color-terminal-red),
+    -1px 0 var(--color-terminal-cyan);
+  animation: glitch-static-flash 5s infinite;
+}
+
+@keyframes glitch-static-flash {
+  0%,
+  92%,
+  100% {
+    text-shadow:
+      1px 0 var(--color-terminal-red),
+      -1px 0 var(--color-terminal-cyan);
+    transform: translate(0);
+  }
+  93% {
+    text-shadow:
+      2px 0 var(--color-terminal-red),
+      -2px 0 var(--color-terminal-cyan),
+      0 0 4px rgba(0, 255, 65, 0.3);
+    transform: translate(1px, -1px);
+  }
+  94% {
+    text-shadow:
+      -2px 0 var(--color-terminal-red),
+      2px 0 var(--color-terminal-cyan);
+    transform: translate(-2px, 1px);
+  }
+  95% {
+    text-shadow:
+      2px 0 var(--color-terminal-red),
+      -2px 0 var(--color-terminal-cyan);
+    transform: translate(0);
+  }
+}
+
+/*
+ * Reduced-motion gate: suppress all glitch animations and shadows
+ * when the OS reports prefers-reduced-motion: reduce. The text
+ * remains present and legible.
+ */
+.glitch-reduced,
+.glitch-reduced:hover {
+  animation: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+}
+
+/* Global reduced-motion: also kill the glitch static flash */
+@media (prefers-reduced-motion: reduce) {
+  .glitch-hover:hover {
+    animation: none;
+    text-shadow: none;
+  }
+
+  .glitch-static {
+    animation: none;
+    text-shadow: none;
+  }
+}
+

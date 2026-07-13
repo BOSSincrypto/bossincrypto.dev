@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import TerminalHeader from "./components/TerminalHeader";
 import StatsBar from "./components/StatsBar";
@@ -7,12 +7,18 @@ import ProjectGrid from "./components/ProjectGrid";
 import ProjectDetail from "./components/ProjectDetail";
 import BootSequence from "./components/BootSequence";
 import ScanlineOverlay from "./components/effects/ScanlineOverlay";
+import MatrixRain from "./components/effects/MatrixRain";
 import SettingsPanel, {
   type SettingsKey,
 } from "./components/SettingsPanel";
 import { useProjects } from "./hooks/useProjects";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import { useReducedMotion } from "./hooks/useReducedMotion";
+import {
+  setSoundEnabled,
+  onUserGesture,
+  playBeep,
+} from "./services/SoundService";
 import { DEFAULT_SETTINGS, type SettingsState, type Project } from "./types";
 
 /**
@@ -83,10 +89,40 @@ export default function App() {
 
   const handleToggle = useCallback(
     (key: SettingsKey) => {
-      setSettings((prev) => ({ ...prev, [key]: !prev[key] }));
+      setSettings((prev) => {
+        const next = { ...prev, [key]: !prev[key] };
+        // Sync sound setting to the SoundService immediately
+        if (key === "sound") {
+          setSoundEnabled(next.sound);
+          // Play a beep as feedback when toggling sound ON (user-initiated)
+          if (next.sound) {
+            playBeep(reducedMotion);
+          }
+        }
+        return next;
+      });
     },
-    [setSettings],
+    [setSettings, reducedMotion],
   );
+
+  // Sync sound enabled to SoundService on mount and when settings change
+  useEffect(() => {
+    setSoundEnabled(settings.sound);
+  }, [settings.sound]);
+
+  // Register global user-gesture listener to unlock AudioContext
+  // (autoplay-policy compliant — context only created on user interaction)
+  useEffect(() => {
+    const handler = () => onUserGesture();
+    window.addEventListener("click", handler, { once: false });
+    window.addEventListener("keydown", handler, { once: false });
+    window.addEventListener("touchstart", handler, { once: false });
+    return () => {
+      window.removeEventListener("click", handler);
+      window.removeEventListener("keydown", handler);
+      window.removeEventListener("touchstart", handler);
+    };
+  }, []);
 
   const handleSettingsClose = useCallback(() => {
     setSettingsOpen(false);
@@ -102,6 +138,9 @@ export default function App() {
       {/* CRT scanline overlay — decorative, aria-hidden (VAL-BOOT-004, VAL-BOOT-014) */}
       <ScanlineOverlay visible={settings.scanlines} />
 
+      {/* Matrix rain — canvas background, z-index 0, aria-hidden (VAL-BOOT-005, VAL-BOOT-014) */}
+      <MatrixRain visible={settings.matrixRain} reducedMotion={reducedMotion} />
+
       {/* Boot sequence — plays once on first visit (VAL-BOOT-001..003) */}
       {!booted && (
         <BootSequence
@@ -110,7 +149,7 @@ export default function App() {
         />
       )}
 
-      <main className="min-h-screen bg-terminal-bg font-mono text-terminal-green p-4 sm:p-8">
+      <main className="relative z-10 min-h-screen bg-terminal-bg font-mono text-terminal-green p-4 sm:p-8">
         <div className="mx-auto w-full max-w-4xl">
           <motion.div
             className="text-sm text-terminal-cyan"

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import GlitchText from "./effects/GlitchText";
 
 /**
  * Single social link rendered as a terminal command.
@@ -114,10 +115,10 @@ export default function TerminalHeader() {
       <div className="flex min-w-0 flex-1 flex-col gap-4">
         <motion.div variants={itemVariants} className="flex flex-col gap-1">
           <h1 className="font-mono text-3xl font-bold tracking-wide text-terminal-green sm:text-4xl">
-            ILYA
+            <GlitchText mode="static">ILYA</GlitchText>
           </h1>
           <h2 className="font-mono text-lg font-semibold text-terminal-cyan sm:text-xl">
-            BOSSincrypto
+            <GlitchText mode="static">BOSSincrypto</GlitchText>
           </h2>
           <p className="font-mono text-sm text-terminal-text">
             Crypto Investor • Influencer • Builder

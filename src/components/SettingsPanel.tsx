@@ -32,13 +32,13 @@ const TOGGLES: readonly ToggleConfig[] = [
     key: "matrixRain",
     label: "Matrix Rain",
     command: "matrix-rain",
-    placeholder: true,
+    placeholder: false,
   },
   {
     key: "sound",
     label: "Sound",
     command: "sound",
-    placeholder: true,
+    placeholder: false,
   },
 ];
 
