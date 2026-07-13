@@ -211,43 +211,47 @@ export default function App() {
           totalCount={totalCount}
         />
 
-        {/* Project hub — wider container so the grid can use >=3 columns */}
-        <section
-          data-testid="project-hub"
-          className="mx-auto mt-6 w-full max-w-7xl px-2 sm:px-6"
-          aria-label="Projects"
-        >
-          <ProjectGrid
-            groups={showEmptyState ? [] : filteredGroups}
-            loading={loading}
-            reducedMotion={reducedMotion}
-            onCardClick={handleCardClick}
-          />
+        {/* Project hub — wider container so the grid can use >=3 columns.
+             Gated on `booted` so the stagger entrance animation plays AFTER the
+             boot overlay has been removed, not hidden underneath it (VAL-CROSS-001). */}
+        {booted && (
+          <section
+            data-testid="project-hub"
+            className="mx-auto mt-6 w-full max-w-7xl px-2 sm:px-6"
+            aria-label="Projects"
+          >
+            <ProjectGrid
+              groups={showEmptyState ? [] : filteredGroups}
+              loading={loading}
+              reducedMotion={reducedMotion}
+              onCardClick={handleCardClick}
+            />
 
-          {/* Empty state when no results match (VAL-PROJ-020) */}
-          {showEmptyState && (
-            <div
-              data-testid="empty-state"
-              className="mt-8 flex flex-col items-center gap-3 rounded border border-terminal-green/20 bg-terminal-green/5 px-6 py-10 text-center font-mono"
-            >
-              <span className="text-2xl text-terminal-dim" aria-hidden="true">
-                &gt;_ no matches found
-              </span>
-              <p className="text-sm text-terminal-dim/70">
-                No projects match the current filters. Try adjusting your
-                search, category, or language selection.
-              </p>
-              <button
-                type="button"
-                onClick={clearFilters}
-                aria-label="Clear all filters"
-                className="mt-2 rounded border border-terminal-cyan/30 px-3 py-1.5 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+            {/* Empty state when no results match (VAL-PROJ-020) */}
+            {showEmptyState && (
+              <div
+                data-testid="empty-state"
+                className="mt-8 flex flex-col items-center gap-3 rounded border border-terminal-green/20 bg-terminal-green/5 px-6 py-10 text-center font-mono"
               >
-                <span className="text-terminal-green">$</span> clear filters
-              </button>
-            </div>
-          )}
-        </section>
+                <span className="text-2xl text-terminal-dim" aria-hidden="true">
+                  &gt;_ no matches found
+                </span>
+                <p className="text-sm text-terminal-dim/70">
+                  No projects match the current filters. Try adjusting your
+                  search, category, or language selection.
+                </p>
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  aria-label="Clear all filters"
+                  className="mt-2 rounded border border-terminal-cyan/30 px-3 py-1.5 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+                >
+                  <span className="text-terminal-green">$</span> clear filters
+                </button>
+              </div>
+            )}
+          </section>
+        )}
       </main>
 
       {/* Project detail modal — AnimatePresence handles enter/exit animations (VAL-PROJ-014..018) */}
