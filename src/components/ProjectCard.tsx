@@ -207,12 +207,12 @@ export default function ProjectCard({
         )}
       </div>
 
-      {/* Footer — license, GitHub link, homepage link (distinct from body click) */}
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-terminal-green/15 px-4 py-2 text-xs">
+      {/* Footer — license, GitHub link, homepage link (distinct from body click), min 44px touch targets */}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-terminal-green/15 px-4 py-2.5 text-xs">
         {project.license && (
           <span
             data-testid="card-license"
-            className="text-terminal-dim"
+            className="inline-flex min-h-[44px] items-center text-terminal-dim"
             title={`License: ${project.license}`}
           >
             <span className="text-terminal-green/60">⚖</span> {project.license}
@@ -225,7 +225,7 @@ export default function ProjectCard({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View ${project.name} on GitHub (opens in new tab)`}
-          className="text-terminal-green/80 underline-offset-2 transition-colors hover:text-terminal-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green"
+          className="inline-flex min-h-[44px] items-center text-terminal-green/80 underline-offset-2 transition-colors hover:text-terminal-green hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green"
         >
           [github]
         </a>
@@ -237,7 +237,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Open homepage for ${project.name} (opens in new tab)`}
-            className="text-terminal-cyan/80 underline-offset-2 transition-colors hover:text-terminal-cyan hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan"
+            className="inline-flex min-h-[44px] items-center text-terminal-cyan/80 underline-offset-2 transition-colors hover:text-terminal-cyan hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan"
           >
             [live demo ↗]
           </a>

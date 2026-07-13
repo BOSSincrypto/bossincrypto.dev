@@ -114,13 +114,13 @@ export default function ControlBar({
   return (
     <div
       data-testid="control-bar"
-      className="mx-auto mt-4 w-full max-w-7xl px-4 sm:px-6"
+      className="mx-auto mt-4 w-full max-w-7xl px-3 sm:px-6"
       role="region"
       aria-label="Search and filter controls"
     >
       <div className="flex flex-col gap-3">
         {/* Row 1: Search + Fork toggle row */}
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
           {/* Terminal-style search input (VAL-SEARCH-001) */}
           <div
             data-testid="search-container"
@@ -141,7 +141,7 @@ export default function ControlBar({
               onKeyDown={handleSearchKeyDown}
               placeholder="grep -i project, topic, or language"
               aria-label="Search projects by name, description, or topics"
-              className="w-full rounded border border-terminal-green/30 bg-terminal-bg py-2 pl-8 pr-3 font-mono text-sm text-terminal-text placeholder-terminal-dim/50 caret-terminal-green outline-none transition-colors focus:border-terminal-green/60 focus:ring-1 focus:ring-terminal-green/40"
+              className="w-full min-h-[44px] rounded border border-terminal-green/30 bg-terminal-bg py-2.5 pl-8 pr-8 font-mono text-sm text-terminal-text placeholder-terminal-dim/50 caret-terminal-green outline-none transition-colors focus:border-terminal-green/60 focus:ring-1 focus:ring-terminal-green/40"
             />
             <span
               data-testid="search-cursor"
@@ -150,7 +150,7 @@ export default function ControlBar({
             />
           </div>
 
-          {/* Fork toggle (VAL-SEARCH-009) */}
+          {/* Fork toggle (VAL-SEARCH-009) — min 44px touch target */}
           <button
             data-testid="fork-toggle"
             type="button"
@@ -158,11 +158,12 @@ export default function ControlBar({
             aria-checked={includeForks}
             aria-label={`${includeForks ? "Exclude" : "Include"} forked repositories`}
             onClick={() => onIncludeForksChange(!includeForks)}
-            className={`flex shrink-0 items-center gap-2 rounded border px-3 py-2 font-mono text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg ${
+            className={`flex shrink-0 items-center gap-2 rounded border px-3 py-2.5 font-mono text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg ${
               includeForks
                 ? "border-terminal-green/50 bg-terminal-green/10 text-terminal-green"
                 : "border-terminal-green/20 bg-terminal-green/5 text-terminal-dim"
             }`}
+            style={{ minHeight: 44 }}
           >
             <span
               className={`inline-block h-3.5 w-3.5 rounded border transition-colors ${
@@ -178,8 +179,8 @@ export default function ControlBar({
         </div>
 
         {/* Row 2: Filters + Sort + Clear + Result count */}
-        <div className="flex flex-col gap-3 md:flex-row md:flex-wrap md:items-center">
-          {/* Category filter dropdown (VAL-SEARCH-008) */}
+        <div className="flex flex-col gap-2 md:flex-row md:flex-wrap md:items-center">
+          {/* Category filter dropdown (VAL-SEARCH-008) — min 44px touch target */}
           <div className="flex items-center gap-2">
             <label
               htmlFor="category-select"
@@ -193,7 +194,7 @@ export default function ControlBar({
               value={activeCategory ?? ""}
               onChange={handleCategoryChange}
               aria-label="Filter by category"
-              className="w-full min-w-[140px] rounded border border-terminal-green/30 bg-terminal-bg px-2 py-1.5 font-mono text-xs text-terminal-text outline-none transition-colors focus:border-terminal-cyan/60 focus:ring-1 focus:ring-terminal-cyan/40"
+              className="w-full min-w-[140px] min-h-[44px] rounded border border-terminal-green/30 bg-terminal-bg px-2 py-2 font-mono text-xs text-terminal-text outline-none transition-colors focus:border-terminal-cyan/60 focus:ring-1 focus:ring-terminal-cyan/40"
             >
               <option value="">all categories</option>
               {CATEGORY_ORDER.map((cat) => (
@@ -204,7 +205,7 @@ export default function ControlBar({
             </select>
           </div>
 
-          {/* Language filter dropdown (VAL-SEARCH-007) */}
+          {/* Language filter dropdown (VAL-SEARCH-007) — min 44px touch target */}
           <div className="flex items-center gap-2">
             <label
               htmlFor="language-select"
@@ -218,7 +219,7 @@ export default function ControlBar({
               value={activeLanguage ?? ""}
               onChange={handleLanguageChange}
               aria-label="Filter by language"
-              className="w-full min-w-[130px] rounded border border-terminal-green/30 bg-terminal-bg px-2 py-1.5 font-mono text-xs text-terminal-text outline-none transition-colors focus:border-terminal-cyan/60 focus:ring-1 focus:ring-terminal-cyan/40"
+              className="w-full min-w-[130px] min-h-[44px] rounded border border-terminal-green/30 bg-terminal-bg px-2 py-2 font-mono text-xs text-terminal-text outline-none transition-colors focus:border-terminal-cyan/60 focus:ring-1 focus:ring-terminal-cyan/40"
             >
               <option value="">all languages</option>
               {allLanguages.map((lang) => (
@@ -229,24 +230,24 @@ export default function ControlBar({
             </select>
           </div>
 
-          {/* Sort selector — terminal-style radio buttons (VAL-SEARCH-013) */}
+          {/* Sort selector — terminal-style radio buttons (VAL-SEARCH-013), min 44px touch targets */}
           <fieldset
             data-testid="sort-selector"
-            className="flex items-center gap-1.5"
+            className="flex flex-wrap items-center gap-1.5"
             aria-label="Sort projects"
           >
             <legend className="sr-only">Sort by</legend>
             <span className="shrink-0 font-mono text-xs text-terminal-cyan">
               <span className="text-terminal-green">$</span> sort
             </span>
-            <div className="flex gap-1">
+            <div className="flex flex-wrap gap-1">
               {SORT_OPTIONS.map((opt) => {
                 const isActive = sortBy === opt.value;
                 return (
                   <label
                     key={opt.value}
                     data-testid={`sort-option-${opt.value}`}
-                    className={`cursor-pointer rounded border px-2 py-1 font-mono text-xs transition-colors focus-within:ring-2 focus-within:ring-terminal-green/60 ${
+                    className={`inline-flex min-h-[44px] cursor-pointer items-center rounded border px-2.5 py-2.5 font-mono text-xs transition-colors focus-within:ring-2 focus-within:ring-terminal-green/60 ${
                       isActive
                         ? "border-terminal-green bg-terminal-green/15 text-terminal-green"
                         : "border-terminal-green/20 bg-terminal-green/5 text-terminal-dim hover:border-terminal-green/40"
@@ -268,14 +269,14 @@ export default function ControlBar({
             </div>
           </fieldset>
 
-          {/* Clear/reset button (VAL-SEARCH-016) */}
+          {/* Clear/reset button (VAL-SEARCH-016) — min 44px touch target */}
           {hasActiveFilters && (
             <button
               data-testid="clear-filters"
               type="button"
               onClick={onClear}
               aria-label="Clear all filters"
-              className="rounded border border-terminal-red/30 bg-terminal-red/5 px-2.5 py-1 font-mono text-xs text-terminal-red transition-colors hover:border-terminal-red/60 hover:bg-terminal-red/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-red focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+              className="inline-flex min-h-[44px] items-center rounded border border-terminal-red/30 bg-terminal-red/5 px-3 py-2 font-mono text-xs text-terminal-red transition-colors hover:border-terminal-red/60 hover:bg-terminal-red/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-red focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
             >
               <span className="text-terminal-red">$</span> clear
             </button>
@@ -284,7 +285,7 @@ export default function ControlBar({
           {/* Result count display (VAL-SEARCH-017) */}
           <span
             data-testid="result-count"
-            className="ml-auto shrink-0 font-mono text-xs text-terminal-dim"
+            className="shrink-0 font-mono text-xs text-terminal-dim md:ml-auto"
             aria-live="polite"
             aria-atomic="true"
           >

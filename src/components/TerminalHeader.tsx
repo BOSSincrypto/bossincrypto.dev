@@ -93,13 +93,13 @@ export default function TerminalHeader() {
   return (
     <motion.header
       data-testid="terminal-header"
-      className="terminal-window flex flex-col gap-6 p-5 sm:p-6 md:flex-row md:items-start"
+      className="terminal-window flex flex-col gap-4 p-3 sm:flex-row sm:gap-6 sm:p-6 md:items-start"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       aria-label="Profile header"
     >
-      {/* Avatar */}
+      {/* Avatar — responsive sizing */}
       <motion.div variants={itemVariants} className="shrink-0">
         <img
           src="/avatarka_main.jpg"
@@ -107,20 +107,20 @@ export default function TerminalHeader() {
           width={128}
           height={128}
           loading="eager"
-          className="h-28 w-28 rounded border border-terminal-green/40 bg-terminal-bg object-cover shadow-[0_0_25px_-5px_rgba(0,255,65,0.5)] sm:h-32 sm:w-32"
+          className="h-20 w-20 rounded border border-terminal-green/40 bg-terminal-bg object-cover shadow-[0_0_25px_-5px_rgba(0,255,65,0.5)] sm:h-28 sm:w-28 md:h-32 md:w-32"
         />
       </motion.div>
 
       {/* Identity + links + stack */}
-      <div className="flex min-w-0 flex-1 flex-col gap-4">
+      <div className="flex min-w-0 flex-1 flex-col gap-3 sm:gap-4">
         <motion.div variants={itemVariants} className="flex flex-col gap-1">
-          <h1 className="font-mono text-3xl font-bold tracking-wide text-terminal-green sm:text-4xl">
+          <h1 className="font-mono text-2xl font-bold tracking-wide text-terminal-green sm:text-3xl md:text-4xl">
             <GlitchText mode="static">ILYA</GlitchText>
           </h1>
-          <h2 className="font-mono text-lg font-semibold text-terminal-cyan sm:text-xl">
+          <h2 className="font-mono text-base font-semibold text-terminal-cyan sm:text-lg md:text-xl">
             <GlitchText mode="static">BOSSincrypto</GlitchText>
           </h2>
-          <p className="font-mono text-sm text-terminal-text">
+          <p className="font-mono text-xs text-terminal-text sm:text-sm">
             Crypto Investor • Influencer • Builder
           </p>
         </motion.div>

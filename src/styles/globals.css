@@ -28,12 +28,19 @@ body,
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-terminal-bg);
   color: var(--color-terminal-text);
   font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Prevent iOS Safari overscroll bounce from leaking hidden overflow */
+  overscroll-behavior-x: none;
 }
 
 /* Respect reduced motion preference */

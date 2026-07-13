@@ -72,7 +72,7 @@ export default function StatsBar({ projects, reducedMotion = false }: StatsBarPr
   return (
     <div
       data-testid="stats-bar"
-      className="mx-auto mt-6 grid w-full max-w-7xl grid-cols-2 gap-3 px-4 sm:grid-cols-4 sm:px-6"
+      className="mx-auto mt-6 grid w-full max-w-7xl grid-cols-2 gap-2 px-3 sm:grid-cols-4 sm:gap-3 sm:px-6"
       role="group"
       aria-label="Project statistics"
     >

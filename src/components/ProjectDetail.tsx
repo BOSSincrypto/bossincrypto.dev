@@ -128,7 +128,7 @@ export default function ProjectDetail({
         <motion.div
           key="modal-backdrop"
           data-testid="modal-backdrop"
-          className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/75 p-2 backdrop-blur-sm sm:p-4"
           variants={backdrop}
           initial="hidden"
           animate="visible"
@@ -150,20 +150,20 @@ export default function ProjectDetail({
             aria-modal="true"
             aria-labelledby="modal-title"
           >
-            {/* Close button — top right corner */}
+            {/* Close button — top right corner, min 44x44 touch target */}
             <button
               ref={closeBtnRef}
               data-testid="modal-close-btn"
               type="button"
               onClick={onClose}
               aria-label="Close modal"
-              className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded border border-terminal-green/30 bg-terminal-bg/90 text-terminal-green transition-colors hover:border-terminal-green/60 hover:bg-terminal-green/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+              className="absolute right-2 top-2 z-10 flex h-11 w-11 items-center justify-center rounded border border-terminal-green/30 bg-terminal-bg/90 text-terminal-green transition-colors hover:border-terminal-green/60 hover:bg-terminal-green/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
             >
               <span aria-hidden="true">✕</span>
             </button>
 
-            {/* Scrollable content area */}
-            <div className="overflow-y-auto p-6">
+            {/* Scrollable content area — responsive padding */}
+            <div className="overflow-y-auto p-4 sm:p-6">
               {/* Title bar — terminal window chrome */}
               <div className="mb-4 flex items-center gap-1.5 border-b border-terminal-green/20 pb-3">
                 <span

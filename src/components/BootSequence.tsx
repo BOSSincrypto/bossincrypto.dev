@@ -100,10 +100,10 @@ export default function BootSequence({
           {/* Moving scan band (decorative CRT effect) */}
           <div className="crt-scan-band" />
 
-          {/* Boot text container */}
+          {/* Boot text container — responsive padding + text sizing for mobile */}
           <div
             data-testid="boot-text"
-            className="relative z-10 flex min-h-full w-full max-w-2xl flex-col items-start justify-center p-8 font-mono text-sm text-terminal-green sm:text-base"
+            className="relative z-10 flex min-h-full w-full max-w-2xl flex-col items-start justify-center px-4 py-8 font-mono text-xs text-terminal-green sm:px-8 sm:text-sm md:text-base"
           >
             {BOOT_LINES.slice(0, visibleLines).map((line, i) => (
               <div key={i} className="boot-line py-0.5">
@@ -120,14 +120,14 @@ export default function BootSequence({
             )}
           </div>
 
-          {/* Skip button — visible affordance for sighted users */}
+          {/* Skip button — visible affordance for sighted users, min 44px touch target */}
           <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
               skip();
             }}
-            className="absolute bottom-6 right-6 z-20 font-mono text-xs text-terminal-dim transition-colors hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green"
+            className="absolute bottom-4 right-4 z-20 flex h-11 min-h-[44px] items-center justify-center px-4 font-mono text-xs text-terminal-dim transition-colors hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green"
             tabIndex={-1}
           >
             [ skip ]

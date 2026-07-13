@@ -106,7 +106,7 @@ export default function SettingsPanel({
         role="dialog"
         aria-modal="true"
         aria-label="Settings"
-        className="settings-panel-enter fixed right-0 top-0 z-[10002] flex h-full w-72 flex-col gap-4 border-l border-terminal-green/40 bg-terminal-bg p-6 font-mono text-sm shadow-[-8px_0_30px_-10px_rgba(0,0,0,0.8)]"
+        className="settings-panel-enter fixed right-0 top-0 z-[10002] flex h-full w-full flex-col gap-4 border-l border-terminal-green/40 bg-terminal-bg p-4 font-mono text-sm shadow-[-8px_0_30px_-10px_rgba(0,0,0,0.8)] sm:w-72 sm:p-6"
       >
         {/* Title bar */}
         <div className="flex items-center justify-between border-b border-terminal-green/20 pb-3">
@@ -123,13 +123,13 @@ export default function SettingsPanel({
             type="button"
             onClick={onClose}
             aria-label="Close settings"
-            className="text-terminal-dim transition-colors hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+            className="flex h-11 w-11 items-center justify-center text-terminal-dim transition-colors hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
           >
             [x]
           </button>
         </div>
 
-        {/* Toggle switches */}
+        {/* Toggle switches — min 44px touch targets */}
         <div className="flex flex-col gap-3" role="group" aria-label="Effect toggles">
           {TOGGLES.map((toggle, index) => {
             const checked = settings[toggle.key];
@@ -143,7 +143,7 @@ export default function SettingsPanel({
                 aria-checked={checked}
                 aria-label={toggle.label}
                 onClick={() => onToggle(toggle.key)}
-                className="group flex w-full items-center justify-between rounded border border-terminal-green/20 bg-terminal-green/5 px-3 py-2.5 text-left transition-colors hover:border-terminal-green/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+                className="group flex w-full items-center justify-between rounded border border-terminal-green/20 bg-terminal-green/5 px-3 py-3 text-left transition-colors hover:border-terminal-green/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
               >
                 <span className="flex flex-col gap-0.5">
                   <span className="text-terminal-text">

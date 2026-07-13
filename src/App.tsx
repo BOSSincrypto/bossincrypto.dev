@@ -161,7 +161,7 @@ export default function App() {
         </Suspense>
       )}
 
-      <main className="relative z-10 min-h-screen bg-terminal-bg font-mono text-terminal-green p-4 sm:p-8">
+      <main className="relative z-10 min-h-screen bg-terminal-bg font-mono text-terminal-green p-2 sm:p-4 md:p-8">
         <div className="mx-auto w-full max-w-4xl">
           <motion.div
             className="text-sm text-terminal-cyan"
@@ -174,13 +174,13 @@ export default function App() {
             <span className="terminal-cursor ml-1 inline-block h-3 w-1.5 translate-y-0.5" />
           </motion.div>
 
-          {/* Settings trigger — keyboard accessible */}
+          {/* Settings trigger — keyboard accessible, min 44px touch target */}
           <button
             ref={settingsBtnRef}
             type="button"
             onClick={() => setSettingsOpen(true)}
             aria-label="Open settings"
-            className="fixed right-4 top-4 z-[9998] rounded border border-terminal-green/30 bg-terminal-bg/80 px-3 py-1.5 font-mono text-xs text-terminal-dim backdrop-blur transition-colors hover:border-terminal-green/60 hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+            className="fixed right-3 top-3 z-[9998] inline-flex min-h-[44px] items-center rounded border border-terminal-green/30 bg-terminal-bg/80 px-3 py-2 font-mono text-xs text-terminal-dim backdrop-blur transition-colors hover:border-terminal-green/60 hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
           >
             <span className="text-terminal-green">$</span> settings
           </button>
@@ -214,7 +214,7 @@ export default function App() {
         {/* Project hub — wider container so the grid can use >=3 columns */}
         <section
           data-testid="project-hub"
-          className="mx-auto mt-6 w-full max-w-7xl px-4 sm:px-6"
+          className="mx-auto mt-6 w-full max-w-7xl px-2 sm:px-6"
           aria-label="Projects"
         >
           <ProjectGrid

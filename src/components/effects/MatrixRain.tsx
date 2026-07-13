@@ -255,8 +255,13 @@ export default function MatrixRain({ visible, reducedMotion }: MatrixRainProps) 
     return () => window.removeEventListener("resize", handler);
   }, []);
 
-  // Don't render at all when not visible
-  if (!visible) return null;
+  // Mobile detection — use window.innerWidth directly for render decision
+  // (covers SSR where window is undefined)
+  const isMobile =
+    typeof window !== "undefined" && window.innerWidth < MOBILE_BREAKPOINT;
+
+  // Don't render at all when not visible or on mobile (performance)
+  if (!visible || isMobile) return null;
 
   return (
     <canvas
