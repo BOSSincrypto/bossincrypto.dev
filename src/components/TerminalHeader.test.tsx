@@ -32,6 +32,25 @@ describe("TerminalHeader", () => {
     });
   });
 
+  describe("main site link", () => {
+    it("renders a link to bossincrypto.com with correct href, target and rel", () => {
+      render(<TerminalHeader />);
+      const link = screen.getByTestId("main-site-link");
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute("href", "https://bossincrypto.com");
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link.getAttribute("rel") ?? "").toMatch(/noopener/);
+    });
+
+    it("styles the main site link as a terminal command with $ prefix and monospace", () => {
+      render(<TerminalHeader />);
+      const link = screen.getByTestId("main-site-link");
+      expect(link.className).toMatch(/font-mono/);
+      expect(link.className).toMatch(/text-terminal-cyan/);
+      expect(link.textContent ?? "").toMatch(/^\$\s/);
+    });
+  });
+
   describe("social links (VAL-HEADER-002, VAL-HEADER-003)", () => {
     it("renders exactly five social links", () => {
       render(<TerminalHeader />);

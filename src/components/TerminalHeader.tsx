@@ -123,6 +123,22 @@ export default function TerminalHeader() {
           <p className="font-mono text-xs text-terminal-text sm:text-sm">
             Crypto Investor • Influencer • Builder
           </p>
+
+          {/* Main site link styled as a terminal command */}
+          <a
+            href="https://bossincrypto.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Main site — bossincrypto.com"
+            data-testid="main-site-link"
+            className="group inline-flex items-center gap-1 font-mono text-sm text-terminal-cyan transition-colors hover:text-terminal-green hover:drop-shadow-[0_0_6px_rgba(0,255,65,0.6)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+          >
+            <span className="text-terminal-green">$</span>{" "}
+            <span>open</span>{" "}
+            <span className="group-hover:text-terminal-green">
+              bossincrypto.com
+            </span>
+          </a>
         </motion.div>
 
         {/* Social links styled as terminal commands */}
