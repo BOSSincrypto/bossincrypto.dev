@@ -244,7 +244,7 @@ export default function App() {
                   type="button"
                   onClick={clearFilters}
                   aria-label="Clear all filters"
-                  className="mt-2 rounded border border-terminal-cyan/30 px-3 py-1.5 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+                  className="mt-2 min-h-[44px] rounded border border-terminal-cyan/30 px-3 py-2 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
                 >
                   <span className="text-terminal-green">$</span> clear filters
                 </button>

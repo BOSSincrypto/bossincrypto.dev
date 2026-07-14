@@ -139,7 +139,7 @@ export default function TerminalHeader() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className={`group font-mono text-sm transition-colors hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg ${LINK_ACCENTS[i % LINK_ACCENTS.length]}`}
+              className={`group min-h-[44px] py-2 font-mono text-sm transition-colors hover:text-terminal-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-green focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg ${LINK_ACCENTS[i % LINK_ACCENTS.length]}`}
             >
               <span className="text-terminal-green">$</span>{" "}
               <span className="text-terminal-text/70 group-hover:text-terminal-green">
