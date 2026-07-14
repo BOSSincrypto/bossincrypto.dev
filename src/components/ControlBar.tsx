@@ -169,7 +169,7 @@ export default function ControlBar({
               className={`inline-block h-3.5 w-3.5 rounded border transition-colors ${
                 includeForks
                   ? "border-terminal-green bg-terminal-green"
-                  : "border-terminal-dim bg-transparent"
+                  : "border-terminal-dim-bg bg-transparent"
               }`}
               aria-hidden="true"
             />

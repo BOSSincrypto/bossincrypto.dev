@@ -160,7 +160,7 @@ export default function SettingsPanel({
                   className={`relative h-5 w-9 shrink-0 rounded-full border transition-colors ${
                     checked
                       ? "border-terminal-green bg-terminal-green/30"
-                      : "border-terminal-dim bg-terminal-dim/20"
+                      : "border-terminal-dim-bg bg-terminal-dim-bg/20"
                   }`}
                   aria-hidden="true"
                 >
@@ -168,7 +168,7 @@ export default function SettingsPanel({
                     className={`absolute top-0.5 h-3.5 w-3.5 rounded-full transition-all ${
                       checked
                         ? "left-4 bg-terminal-green"
-                        : "left-0.5 bg-terminal-dim"
+                        : "left-0.5 bg-terminal-dim-bg"
                     }`}
                   />
                 </span>
