@@ -1,0 +1,11 @@
+[
+  {
+    "id": "vuzora",
+    "name": "Vuzora",
+    "url": "https://vuzora.ru",
+    "description": "Расписание твоего вуза каждое утро в удобное для тебя время. И не только.",
+    "emoji": "🎓",
+    "techStack": ["Telegram Bot", "Python", "FastAPI", "PostgreSQL"],
+    "status": "live"
+  }
+]

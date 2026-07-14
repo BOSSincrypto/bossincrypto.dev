@@ -1,5 +1,5 @@
 import { beforeEach, afterEach, vi } from "vitest";
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent, act, waitFor } from "@testing-library/react";
 import App from "./App";
 import { BOOT_SEEN_KEY } from "./hooks/useBootSequence";
 
@@ -143,5 +143,115 @@ describe("App — boot sequence integration", () => {
     });
 
     expect(screen.queryByTestId("boot-overlay")).toBeNull();
+  });
+});
+
+describe("App — tab navigation", () => {
+  beforeEach(() => {
+    localStorage.clear();
+    localStorage.setItem(BOOT_SEEN_KEY, "true");
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => [],
+    } as Response);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it("renders the tab navigation", async () => {
+    await renderApp();
+    expect(screen.getByTestId("tab-nav")).toBeInTheDocument();
+    expect(screen.getByTestId("tab-open-source")).toBeInTheDocument();
+    expect(screen.getByTestId("tab-private")).toBeInTheDocument();
+  });
+
+  it("shows open-source view by default", async () => {
+    await renderApp();
+    await act(async () => {});
+    // StatsBar and ControlBar should be visible
+    expect(screen.getByTestId("stats-bar")).toBeInTheDocument();
+    expect(screen.getByTestId("control-bar")).toBeInTheDocument();
+    // Project grid should be present
+    const cards = await screen.findAllByTestId("project-card");
+    expect(cards.length).toBeGreaterThan(0);
+  });
+
+  it("switches to private tab and shows PrivateProjects", async () => {
+    await renderApp();
+    await act(async () => {});
+
+    fireEvent.click(screen.getByTestId("tab-private"));
+
+    // Wait for the transition to complete
+    await waitFor(() => {
+      expect(screen.getByTestId("private-tab-content")).toBeInTheDocument();
+    });
+
+    // StatsBar and ControlBar should be hidden
+    expect(screen.queryByTestId("stats-bar")).toBeNull();
+    expect(screen.queryByTestId("control-bar")).toBeNull();
+
+    // Private projects should be visible
+    expect(screen.getByTestId("private-projects")).toBeInTheDocument();
+    expect(screen.getByTestId("private-project-card")).toBeInTheDocument();
+  });
+
+  it("hides ControlBar on private tab", async () => {
+    await renderApp();
+    await act(async () => {});
+
+    fireEvent.click(screen.getByTestId("tab-private"));
+
+    await waitFor(() => {
+      expect(screen.queryByTestId("control-bar")).toBeNull();
+    });
+  });
+
+  it("hides StatsBar on private tab", async () => {
+    await renderApp();
+    await act(async () => {});
+
+    fireEvent.click(screen.getByTestId("tab-private"));
+
+    await waitFor(() => {
+      expect(screen.queryByTestId("stats-bar")).toBeNull();
+    });
+  });
+
+  it("switches back to open-source tab", async () => {
+    await renderApp();
+    await act(async () => {});
+
+    // Switch to private
+    fireEvent.click(screen.getByTestId("tab-private"));
+    await waitFor(() => {
+      expect(screen.getByTestId("private-tab-content")).toBeInTheDocument();
+    });
+
+    // Switch back to open-source
+    fireEvent.click(screen.getByTestId("tab-open-source"));
+
+    await waitFor(() => {
+      expect(screen.queryByTestId("private-tab-content")).toBeNull();
+    });
+
+    await act(async () => {});
+
+    expect(screen.getByTestId("stats-bar")).toBeInTheDocument();
+    expect(screen.getByTestId("control-bar")).toBeInTheDocument();
+  });
+
+  it("SiteIntro is visible on both tabs", async () => {
+    await renderApp();
+    await act(async () => {});
+
+    expect(screen.getByTestId("site-intro")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByTestId("tab-private"));
+    // SiteIntro is ABOVE the tabs, so it should always be visible
+    expect(screen.getByTestId("site-intro")).toBeInTheDocument();
   });
 });

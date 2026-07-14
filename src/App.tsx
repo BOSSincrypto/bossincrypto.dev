@@ -1,10 +1,12 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import TerminalHeader from "./components/TerminalHeader";
 import SiteIntro from "./components/SiteIntro";
+import TabNav, { type TabId } from "./components/TabNav";
 import StatsBar from "./components/StatsBar";
 import ControlBar from "./components/ControlBar";
 import ProjectGrid from "./components/ProjectGrid";
+import PrivateProjects from "./components/PrivateProjects";
 import ScanlineOverlay from "./components/effects/ScanlineOverlay";
 import { useProjects } from "./hooks/useProjects";
 import { useLocalStorage } from "./hooks/useLocalStorage";
@@ -68,6 +70,7 @@ export default function App() {
   } = useProjects();
   const [booted, setBooted] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<TabId>("open-source");
   const [settings, setSettings] = useLocalStorage<SettingsState>(
     "terminal-settings",
     DEFAULT_SETTINGS,
@@ -206,68 +209,112 @@ export default function App() {
           />
         </div>
 
-        {/* Stats bar (VAL-SEARCH-018) — animated count-up aggregates */}
-        <StatsBar projects={projects} reducedMotion={reducedMotion} />
-
-        {/* Control bar (VAL-SEARCH-001..017) — search, filter, sort */}
-        <ControlBar
-          search={search}
-          onSearchChange={setSearch}
-          activeCategory={activeCategory}
-          onCategoryChange={setActiveCategory}
-          activeLanguage={activeLanguage}
-          onLanguageChange={setActiveLanguage}
-          allLanguages={allLanguages}
-          includeForks={includeForks}
-          onIncludeForksChange={setIncludeForks}
-          sortBy={sortBy}
-          onSortChange={setSortBy}
-          onClear={clearFilters}
-          filteredCount={filteredCount}
-          totalCount={totalCount}
+        {/* Tab navigation — switch between open-source and private views */}
+        <TabNav
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+          reducedMotion={reducedMotion}
         />
 
-        {/* Project hub — wider container so the grid can use >=3 columns.
-             Gated on `booted` so the stagger entrance animation plays AFTER the
-             boot overlay has been removed, not hidden underneath it (VAL-CROSS-001). */}
-        {booted && (
-          <section
-            data-testid="project-hub"
-            className="mx-auto mt-6 w-full max-w-7xl px-2 sm:px-6"
-            aria-label="Projects"
-          >
-            <ProjectGrid
-              groups={showEmptyState ? [] : filteredGroups}
-              loading={loading}
-              reducedMotion={reducedMotion}
-              onCardClick={handleCardClick}
-            />
-
-            {/* Empty state when no results match (VAL-PROJ-020) */}
-            {showEmptyState && (
-              <div
-                data-testid="empty-state"
-                className="mt-8 flex flex-col items-center gap-3 rounded border border-terminal-green/20 bg-terminal-green/5 px-6 py-10 text-center font-mono"
-              >
-                <span className="text-2xl text-terminal-dim" aria-hidden="true">
-                  &gt;_ no matches found
-                </span>
-                <p className="text-sm text-terminal-dim/70">
-                  No projects match the current filters. Try adjusting your
-                  search, category, or language selection.
-                </p>
-                <button
-                  type="button"
-                  onClick={clearFilters}
-                  aria-label="Clear all filters"
-                  className="mt-2 min-h-[44px] rounded border border-terminal-cyan/30 px-3 py-2 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
-                >
-                  <span className="text-terminal-green">$</span> clear filters
-                </button>
-              </div>
-            )}
-          </section>
+        {/* Stats bar — only for open-source (GitHub data) */}
+        {activeTab === "open-source" && (
+          <StatsBar projects={projects} reducedMotion={reducedMotion} />
         )}
+
+        {/* Control bar — only for open-source (search, filter, sort) */}
+        {activeTab === "open-source" && (
+          <ControlBar
+            search={search}
+            onSearchChange={setSearch}
+            activeCategory={activeCategory}
+            onCategoryChange={setActiveCategory}
+            activeLanguage={activeLanguage}
+            onLanguageChange={setActiveLanguage}
+            allLanguages={allLanguages}
+            includeForks={includeForks}
+            onIncludeForksChange={setIncludeForks}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
+            onClear={clearFilters}
+            filteredCount={filteredCount}
+            totalCount={totalCount}
+          />
+        )}
+
+        {/* Tab content — animated switch between open-source grid and private projects */}
+        <AnimatePresence>
+          {activeTab === "open-source" ? (
+            <motion.div
+              key="open-source"
+              role="tabpanel"
+              id="panel-open-source"
+              aria-labelledby="tab-open-source"
+              initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={reducedMotion ? { opacity: 1 } : { opacity: 0, y: -12 }}
+              transition={reducedMotion ? { duration: 0 } : { duration: 0.2 }}
+            >
+              {/* Project hub — wider container so the grid can use >=3 columns.
+                   Gated on `booted` so the stagger entrance animation plays AFTER the
+                   boot overlay has been removed, not hidden underneath it (VAL-CROSS-001). */}
+              {booted && (
+                <section
+                  data-testid="project-hub"
+                  className="mx-auto mt-6 w-full max-w-7xl px-2 sm:px-6"
+                  aria-label="Projects"
+                >
+                  <ProjectGrid
+                    groups={showEmptyState ? [] : filteredGroups}
+                    loading={loading}
+                    reducedMotion={reducedMotion}
+                    onCardClick={handleCardClick}
+                  />
+
+                  {/* Empty state when no results match (VAL-PROJ-020) */}
+                  {showEmptyState && (
+                    <div
+                      data-testid="empty-state"
+                      className="mt-8 flex flex-col items-center gap-3 rounded border border-terminal-green/20 bg-terminal-green/5 px-6 py-10 text-center font-mono"
+                    >
+                      <span className="text-2xl text-terminal-dim" aria-hidden="true">
+                        &gt;_ no matches found
+                      </span>
+                      <p className="text-sm text-terminal-dim/70">
+                        No projects match the current filters. Try adjusting your
+                        search, category, or language selection.
+                      </p>
+                      <button
+                        type="button"
+                        onClick={clearFilters}
+                        aria-label="Clear all filters"
+                        className="mt-2 min-h-[44px] rounded border border-terminal-cyan/30 px-3 py-2 font-mono text-xs text-terminal-cyan transition-colors hover:border-terminal-cyan/60 hover:bg-terminal-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terminal-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-terminal-bg"
+                      >
+                        <span className="text-terminal-green">$</span> clear filters
+                      </button>
+                    </div>
+                  )}
+                </section>
+              )}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="private"
+              initial={reducedMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={reducedMotion ? { opacity: 1 } : { opacity: 0, y: -12 }}
+              transition={reducedMotion ? { duration: 0 } : { duration: 0.2 }}
+            >
+              <div
+                data-testid="private-tab-content"
+                role="tabpanel"
+                id="panel-private"
+                aria-labelledby="tab-private"
+              >
+                <PrivateProjects reducedMotion={reducedMotion} />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </main>
 
       {/* Project detail modal — AnimatePresence handles enter/exit animations (VAL-PROJ-014..018) */}
