@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import { CATEGORY_LABELS, CATEGORY_ORDER, type Project } from "../types";
+import { CATEGORY_LABELS, type Project } from "../types";
 import type { CategoryGroup } from "../hooks/useProjects";
 
 export interface ProjectGridProps {
@@ -33,6 +33,9 @@ const SKELETON_COUNT = 6;
  *   the whole grid, finishing in ~2s. With `reducedMotion`, all cards appear
  *   instantly.
  * - **Loading** (VAL-PROJ-021): skeleton cards + blinking text while data loads.
+ *
+ * Section ordering is controlled by the caller (`useProjects`) — the grid
+ * renders groups in the order received.
  */
 export default function ProjectGrid({
   groups,
@@ -44,14 +47,7 @@ export default function ProjectGrid({
     return <LoadingState />;
   }
 
-  // Normalize to CATEGORY_ORDER priority so the grid always renders in the
-  // curated order regardless of how groups were supplied.
-  const priority = new Map(CATEGORY_ORDER.map((c, i) => [c, i]));
-  const orderedGroups = [...groups].sort(
-    (a, b) => (priority.get(a.category) ?? 99) - (priority.get(b.category) ?? 99),
-  );
-
-  const totalCards = orderedGroups.reduce((n, g) => n + g.projects.length, 0);
+  const totalCards = groups.reduce((n, g) => n + g.projects.length, 0);
   // Spread the ~2s budget across all cards so the entrance lands near 2s
   // regardless of how many projects are rendered.
   const staggerStep = reducedMotion
@@ -62,7 +58,7 @@ export default function ProjectGrid({
 
   return (
     <div data-testid="project-grid" className="flex flex-col gap-8">
-      {orderedGroups.map((group) => {
+      {groups.map((group) => {
         const label = CATEGORY_LABELS[group.category] ?? group.category;
         return (
           <motion.section

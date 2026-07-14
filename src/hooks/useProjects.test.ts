@@ -34,6 +34,42 @@ function createMockResponse(body: unknown): Response {
   } as Response;
 }
 
+/** Build a multi-category repo list for section ordering tests. */
+function multiCategoryRepos(): GitHubRepo[] {
+  return [
+    mockRepo({
+      id: 1,
+      name: "crypto-proj",
+      stargazers_count: 10,
+      updated_at: "2026-01-01T00:00:00Z",
+    }),
+    mockRepo({
+      id: 2,
+      name: "ai-proj",
+      stargazers_count: 80,
+      updated_at: "2026-06-01T00:00:00Z",
+    }),
+    mockRepo({
+      id: 3,
+      name: "tool-proj",
+      stargazers_count: 30,
+      updated_at: "2026-03-01T00:00:00Z",
+    }),
+    mockRepo({
+      id: 4,
+      name: "mobile-proj",
+      stargazers_count: 5,
+      updated_at: "2026-02-01T00:00:00Z",
+    }),
+    mockRepo({
+      id: 5,
+      name: "web-proj",
+      stargazers_count: 45,
+      updated_at: "2026-05-01T00:00:00Z",
+    }),
+  ];
+}
+
 describe("useProjects", () => {
   beforeEach(() => {
     localStorage.clear();
@@ -372,6 +408,83 @@ describe("useProjects", () => {
       }
     }
     expect(groupedCount).toBe(result.current.filteredProjects.length);
+  });
+
+  // ── Section ordering (sort ranks category sections) ──────
+
+  it("filteredGroups sections ordered by total stars when sortBy=stars", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse(multiCategoryRepos()),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    // Default sort is "stars"
+    const categories = result.current.filteredGroups.map((g) => g.category);
+    const totalStars = result.current.filteredGroups.map(
+      (g) => g.projects.reduce((s, p) => s + p.stars, 0),
+    );
+
+    // Verify descending order
+    for (let i = 1; i < totalStars.length; i++) {
+      expect(totalStars[i]).toBeLessThanOrEqual(totalStars[i - 1]);
+    }
+    // groups (unfiltered) stay in CATEGORY_ORDER
+    const groupCats = result.current.groups.map((g) => g.category);
+    expect(groupCats).not.toEqual(categories);
+  });
+
+  it("filteredGroups sections re-order when switching to sortBy=updated", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse(multiCategoryRepos()),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    const defaultCats = result.current.filteredGroups.map((g) => g.category);
+
+    act(() => {
+      result.current.setSortBy("updated");
+    });
+
+    const updatedCats = result.current.filteredGroups.map((g) => g.category);
+
+    // Categories with recent updates should appear earlier than those with older ones
+    const maxDates = result.current.filteredGroups.map((g) =>
+      Math.max(...g.projects.map((p) => new Date(p.updatedAt).getTime())),
+    );
+    for (let i = 1; i < maxDates.length; i++) {
+      expect(maxDates[i]).toBeLessThanOrEqual(maxDates[i - 1]);
+    }
+    // Order should differ from the default stars ordering
+    expect(updatedCats).not.toEqual(defaultCats);
+  });
+
+  it("filteredGroups sections re-order alphabetically when sortBy=name", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      createMockResponse(multiCategoryRepos()),
+    );
+
+    const { result } = renderHook(() => useProjects());
+
+    await waitFor(() => {
+      expect(result.current.loading).toBe(false);
+    });
+
+    act(() => {
+      result.current.setSortBy("name");
+    });
+
+    const categories = result.current.filteredGroups.map((g) => g.category);
+    expect(categories).toEqual([...categories].sort());
   });
 });
 

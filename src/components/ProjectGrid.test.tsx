@@ -76,9 +76,10 @@ describe("ProjectGrid", () => {
       ).toHaveLength(1);
     });
 
-    it("orders sections by category priority", () => {
-      // Pass groups out of order; grid should normalize to CATEGORY_ORDER
-      const outOfOrder: CategoryGroup[] = [
+    it("renders sections in the order they are received", () => {
+      // The grid no longer normalizes to CATEGORY_ORDER — section ordering
+      // is controlled by the caller (useProjects).
+      const customOrder: CategoryGroup[] = [
         {
           category: "ai-ml",
           projects: [makeProject({ id: 3, category: "ai-ml" })],
@@ -88,10 +89,10 @@ describe("ProjectGrid", () => {
           projects: [makeProject({ id: 1 })],
         },
       ];
-      render(<ProjectGrid groups={outOfOrder} />);
+      render(<ProjectGrid groups={customOrder} />);
       const headings = screen.getAllByTestId("category-heading");
-      expect(headings[0]).toHaveTextContent("crypto-web3");
-      expect(headings[1]).toHaveTextContent("ai-ml");
+      expect(headings[0]).toHaveTextContent("ai-ml");
+      expect(headings[1]).toHaveTextContent("crypto-web3");
     });
   });
 

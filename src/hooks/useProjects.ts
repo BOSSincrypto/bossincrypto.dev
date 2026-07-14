@@ -9,6 +9,7 @@ import {
 import {
   filterAndSort,
   getUniqueLanguages,
+  sortCategoryGroups,
 } from "../utils/filters";
 
 /**
@@ -69,7 +70,7 @@ export interface UseProjectsResult {
 
   /** Filtered + sorted projects (applies all active filters + sort). */
   filteredProjects: Project[];
-  /** Filtered projects grouped by category. */
+  /** Filtered projects grouped by category, sections ordered by active sort. */
   filteredGroups: CategoryGroup[];
   /** Number of projects after filtering (before sorting). */
   filteredCount: number;
@@ -104,6 +105,9 @@ const SEARCH_DEBOUNCE_MS = 300;
  * - All filters are combined with AND logic; sort is applied last.
  * - Grouping follows `CATEGORY_ORDER` so sections always render in the
  *   curated priority order.  Empty categories are omitted.
+ * - When a sort is active, filteredGroups sections are ranked by the
+ *   active sort criterion (total stars, most recent update, or
+ *   alphabetical by category label) instead of the fixed CATEGORY_ORDER.
  */
 export function useProjects(): UseProjectsResult {
   const { projects, loading, error, source } = useGitHubData();
@@ -188,7 +192,7 @@ export function useProjects(): UseProjectsResult {
 
   const filteredCount = filteredProjects.length;
 
-  // Filtered groups.
+  // Filtered groups — sections ranked by the active sort criterion.
   const filteredGroups = useMemo<CategoryGroup[]>(() => {
     const byCategory = new Map<ProjectCategory, Project[]>();
     for (const project of filteredProjects) {
@@ -200,11 +204,13 @@ export function useProjects(): UseProjectsResult {
       bucket.push(project);
     }
 
-    return CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => ({
+    const inOrder = CATEGORY_ORDER.filter((c) => byCategory.has(c)).map((category) => ({
       category,
       projects: byCategory.get(category)!,
     }));
-  }, [filteredProjects]);
+
+    return sortCategoryGroups(inOrder, sortBy);
+  }, [filteredProjects, sortBy]);
 
   return {
     projects,

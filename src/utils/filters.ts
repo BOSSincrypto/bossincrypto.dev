@@ -1,4 +1,5 @@
 import type { Project, SortOption } from "../types";
+import type { CategoryGroup } from "../hooks/useProjects";
 
 /**
  * Filter, search, and sort utilities for the project collection.
@@ -130,4 +131,49 @@ export function getCategoryCounts(
     counts[project.category] = (counts[project.category] ?? 0) + 1;
   }
   return counts;
+}
+
+/**
+ * Sort category groups by the active sort criterion, ranking sections
+ * (not just cards within them).
+ *
+ * - stars:   descending by total stars in the section
+ * - updated: descending by most recent updatedAt in the section
+ * - name:    ascending alphabetically by category label
+ */
+export function sortCategoryGroups(
+  groups: CategoryGroup[],
+  sortBy: SortOption,
+): CategoryGroup[] {
+  const copy = [...groups];
+
+  switch (sortBy) {
+    case "stars":
+      return copy.sort((a, b) => {
+        const aTotal = a.projects.reduce((sum, p) => sum + p.stars, 0);
+        const bTotal = b.projects.reduce((sum, p) => sum + p.stars, 0);
+        return bTotal - aTotal;
+      });
+
+    case "updated":
+      return copy.sort((a, b) => {
+        const aMax = Math.max(
+          ...a.projects.map((p) => new Date(p.updatedAt).getTime()),
+        );
+        const bMax = Math.max(
+          ...b.projects.map((p) => new Date(p.updatedAt).getTime()),
+        );
+        return bMax - aMax;
+      });
+
+    case "name":
+      return copy.sort((a, b) =>
+        a.category.localeCompare(b.category, undefined, {
+          sensitivity: "base",
+        }),
+      );
+
+    default:
+      return copy;
+  }
 }
