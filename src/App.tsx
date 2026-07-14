@@ -1,6 +1,7 @@
-import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import TerminalHeader from "./components/TerminalHeader";
+import SiteIntro from "./components/SiteIntro";
 import StatsBar from "./components/StatsBar";
 import ControlBar from "./components/ControlBar";
 import ProjectGrid from "./components/ProjectGrid";
@@ -141,6 +142,15 @@ export default function App() {
   // Show empty state when filters yield zero results (VAL-PROJ-020)
   const showEmptyState = !loading && filteredCount === 0;
 
+  // Stats for the intro section
+  const introStats = useMemo(
+    () => ({
+      totalRepos: projects.length,
+      categoryCount: new Set(projects.map((p) => p.category)).size,
+    }),
+    [projects],
+  );
+
   return (
     <>
       {/* CRT scanline overlay — decorative, aria-hidden (VAL-BOOT-004, VAL-BOOT-014) */}
@@ -188,6 +198,12 @@ export default function App() {
           <div className="mt-6">
             <TerminalHeader />
           </div>
+
+          <SiteIntro
+            totalRepos={introStats.totalRepos}
+            categoryCount={introStats.categoryCount}
+            reducedMotion={reducedMotion}
+          />
         </div>
 
         {/* Stats bar (VAL-SEARCH-018) — animated count-up aggregates */}
