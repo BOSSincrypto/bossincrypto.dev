@@ -5,7 +5,7 @@ import { useEffect, useRef, useCallback } from "react";
 // ================================================================
 //
 // Renders two layers behind all content (z-index 0):
-// 1. A canvas-based starfield with ~120 slowly drifting dots.
+// 1. A canvas-based starfield with 180 slowly drifting dots.
 // 2. A CSS-based holographic scan grid.
 //
 // Performance / accessibility:
@@ -25,7 +25,7 @@ export interface FuturisticBackgroundProps {
 
 // ── Starfield constants ──────────────────────────────────────────
 
-const PARTICLE_COUNT = 130;
+const PARTICLE_COUNT = 180;
 const FRAME_INTERVAL_MS = 1000 / 30; // ~30 FPS target
 const MOBILE_BREAKPOINT = 768;
 
@@ -38,6 +38,8 @@ interface Star {
   driftY: number;          // px/s vertical drift
   twinkleSpeed: number;    // phase change per second
   twinklePhase: number;
+  isBright: boolean;       // bright stars get a glow halo
+  hue: number;             // subtle color tint: cool white, cyan, or amber
 }
 
 /** Seeded PRNG for deterministic star initialisation. */
@@ -54,15 +56,43 @@ function createStars(width: number, height: number): Star[] {
   const stars: Star[] = [];
 
   for (let i = 0; i < PARTICLE_COUNT; i++) {
+    const roll = rng();
+    // 60% tiny (0.5–0.8px), 25% medium (1–1.5px), 15% bright (2–3px with glow)
+    let radius: number;
+    let isBright: boolean;
+    if (roll < 0.6) {
+      radius = 0.5 + rng() * 0.3;
+      isBright = false;
+    } else if (roll < 0.85) {
+      radius = 1.0 + rng() * 0.5;
+      isBright = false;
+    } else {
+      radius = 2.0 + rng() * 1.0;
+      isBright = true;
+    }
+
+    // Subtle color variety: mostly cool white, occasional cyan or amber tint
+    const hueRoll = rng();
+    let hue: number;
+    if (hueRoll < 0.75) {
+      hue = 210; // cool white / blue-white
+    } else if (hueRoll < 0.90) {
+      hue = 185; // cyan
+    } else {
+      hue = 40;  // warm amber
+    }
+
     stars.push({
       x: rng() * width,
       y: rng() * height,
-      radius: rng() < 0.7 ? 0.5 : 1.0,   // most are 0.5px, a few are 1px
+      radius,
       opacity: 0.35 + rng() * 0.6,        // 0.35–0.95
       driftX: -3 + rng() * 6,              // -3 to +3 px/s
       driftY: -2 + rng() * 4,              // -2 to +2 px/s
       twinkleSpeed: 0.3 + rng() * 1.2,     // 0.3–1.5 rad/s
       twinklePhase: rng() * Math.PI * 2,
+      isBright,
+      hue,
     });
   }
 
@@ -126,8 +156,15 @@ export default function FuturisticBackground({
     const w = canvas.width;
     const h = canvas.height;
 
-    // Clear with full dark background
-    ctx.clearRect(0, 0, w, h);
+    // Fill with a dark radial gradient background so the page has a dark
+    // foundation even if the body background is transparent.  The gradient
+    // is darkest at center (space-like depth) and subtly lighter at edges.
+    const bgGrad = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, Math.max(w, h) * 0.75);
+    bgGrad.addColorStop(0, "rgba(5, 5, 10, 1)");
+    bgGrad.addColorStop(0.6, "rgba(8, 8, 14, 0.98)");
+    bgGrad.addColorStop(1, "rgba(12, 12, 20, 0.9)");
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, w, h);
 
     const stars = starsRef.current;
 
@@ -155,15 +192,44 @@ export default function FuturisticBackground({
       const twinkle = 0.5 + 0.5 * Math.sin(s.twinklePhase);
       const alpha = s.opacity * (0.7 + 0.3 * twinkle);
 
-      // Cool cyan-white: shift toward white with a subtle cyan cast.
-      const r = Math.floor(230 * alpha + 25);
-      const g = Math.floor(250 * alpha + 5);
-      const b = Math.floor(255 * alpha);
+      // Convert hue to RGB with a cool-white / cyan / amber tint.
+      const hue = s.hue;
+      const sat = hue === 210 ? 8 : hue === 185 ? 35 : 50; // lower sat for cool white
+      const lum = 85 + alpha * 15;
+      const hslStr = `hsl(${hue}, ${sat}%, ${lum}%)`;
 
+      // ── Glow halo for bright stars ──
+      if (s.isBright) {
+        const glowRadius = s.radius * 4;
+        const glowGrad = ctx.createRadialGradient(
+          s.x, s.y, s.radius * 0.3,
+          s.x, s.y, glowRadius,
+        );
+        const glowAlpha = alpha * 0.5;
+        glowGrad.addColorStop(0, `hsla(${hue}, ${sat}%, ${lum}%, ${glowAlpha})`);
+        glowGrad.addColorStop(0.4, `hsla(${hue}, ${sat}%, ${lum}%, ${glowAlpha * 0.3})`);
+        glowGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, glowRadius, 0, Math.PI * 2);
+        ctx.fillStyle = glowGrad;
+        ctx.fill();
+      }
+
+      // ── Star core ──
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgb(${r},${g},${b})`;
+      ctx.fillStyle = hslStr;
       ctx.fill();
+
+      // ── Extra bright core for larger stars ──
+      if (s.radius >= 1.5) {
+        const innerAlpha = Math.min(1, alpha * 1.3);
+        const innerStr = `hsla(${hue}, 5%, 95%, ${innerAlpha})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius * 0.4, 0, Math.PI * 2);
+        ctx.fillStyle = innerStr;
+        ctx.fill();
+      }
     }
 
     rafRef.current = requestAnimationFrame(animate);
