@@ -23,6 +23,9 @@ import { DEFAULT_SETTINGS, type SettingsState, type Project } from "./types";
 // code-split to keep the main bundle lean (< 200KB gzipped).
 const BootSequence = lazy(() => import("./components/BootSequence"));
 const MatrixRain = lazy(() => import("./components/effects/MatrixRain"));
+const FuturisticBackground = lazy(
+  () => import("./components/effects/FuturisticBackground"),
+);
 const SettingsPanel = lazy(() => import("./components/SettingsPanel"));
 import type { SettingsKey } from "./components/SettingsPanel";
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
@@ -162,6 +165,14 @@ export default function App() {
       {/* Matrix rain — canvas background, z-index 0, aria-hidden (VAL-BOOT-005, VAL-BOOT-014) */}
       <Suspense fallback={<LazyFallback />}>
         <MatrixRain visible={settings.matrixRain} reducedMotion={reducedMotion} />
+      </Suspense>
+
+      {/* Futuristic background — starfield + grid, z-index 0, aria-hidden */}
+      <Suspense fallback={<LazyFallback />}>
+        <FuturisticBackground
+          visible={settings.starfield}
+          reducedMotion={reducedMotion}
+        />
       </Suspense>
 
       {/* Boot sequence — plays once on first visit (VAL-BOOT-001..003) */}

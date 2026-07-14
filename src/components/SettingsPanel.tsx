@@ -29,6 +29,12 @@ const TOGGLES: readonly ToggleConfig[] = [
     placeholder: false,
   },
   {
+    key: "starfield",
+    label: "Starfield",
+    command: "starfield",
+    placeholder: false,
+  },
+  {
     key: "matrixRain",
     label: "Matrix Rain",
     command: "matrix-rain",
@@ -45,10 +51,8 @@ const TOGGLES: readonly ToggleConfig[] = [
 /**
  * SettingsPanel — toggleable visual/audio effect controls.
  *
- * Renders three switches (scanlines, matrix rain, sound) in a terminal-styled
- * panel that slides in from the right. Matrix rain and sound are placeholders
- * (their effects ship in a later milestone) but the toggles are functional and
- * persist their state.
+ * Renders four switches (scanlines, starfield, matrix rain, sound) in a terminal-styled
+ * panel that slides in from the right.
  *
  * Keyboard accessibility (VAL-BOOT-013):
  * - Each toggle is a native `<button role="switch">` — focusable via Tab and

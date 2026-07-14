@@ -298,6 +298,57 @@
 }
 
 /* ================================================================
+ * FuturisticBackground — starfield + holographic grid
+ * ================================================================ */
+
+/*
+ * The starfield canvas is a fixed full-viewport background layer sitting
+ * behind all content (z-index: 0). pointer-events: none so it never
+ * blocks interaction with foreground elements. Coexists with the matrix
+ * canvas — both at z-index 0.
+ */
+.starfield-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/*
+ * Holographic grid — very subtle perspective-like horizontal scan lines
+ * with a faint cyan tint giving a sci-fi / cyberpunk holographic feel.
+ * Uses repeating-linear-gradient for zero runtime cost.
+ */
+.holographic-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 229, 255, 0.03) 2px,
+      rgba(0, 229, 255, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(0, 229, 255, 0.02) 40px,
+      rgba(0, 229, 255, 0.02) 41px
+    );
+}
+
+/* Reduced motion: hide the grid overlay */
+@media (prefers-reduced-motion: reduce) {
+  .holographic-grid {
+    display: none;
+  }
+}
+
+/* ================================================================
  * GlitchText — reusable glitch text component (VAL-BOOT-008, VAL-BOOT-009)
  * ================================================================ */
 

@@ -133,15 +133,18 @@ export interface FilterState {
 export interface SettingsState {
   /** CRT scanline overlay on/off. */
   scanlines: boolean;
-  /** Matrix rain background on/off (placeholder toggle — effect in later milestone). */
+  /** Matrix rain background on/off. */
   matrixRain: boolean;
-  /** Sound effects on/off (placeholder toggle — effect in later milestone). */
+  /** Starfield + grid futuristic background on/off. */
+  starfield: boolean;
+  /** Sound effects on/off. */
   sound: boolean;
 }
 
-/** Default settings: scanlines on, matrix rain and sound off. */
+/** Default settings: scanlines on, starfield on, matrix rain and sound off. */
 export const DEFAULT_SETTINGS: SettingsState = {
   scanlines: true,
   matrixRain: false,
+  starfield: true,
   sound: false,
 };

@@ -24,6 +24,7 @@ function renderPanel(overrides?: Partial<Parameters<typeof SettingsPanel>[0]>) {
 describe("SettingsPanel", () => {
   beforeEach(() => {
     mockSettings.scanlines = true;
+    mockSettings.starfield = true;
     mockSettings.matrixRain = false;
     mockSettings.sound = false;
   });
@@ -39,25 +40,40 @@ describe("SettingsPanel", () => {
       expect(screen.queryByTestId("settings-panel")).toBeNull();
     });
 
-    it("renders all three toggle controls", () => {
+    it("renders all four toggle controls", () => {
       renderPanel();
-      expect(screen.getByRole("switch", { name: /scanlines/i })).toBeInTheDocument();
-      expect(screen.getByRole("switch", { name: /matrix/i })).toBeInTheDocument();
-      expect(screen.getByRole("switch", { name: /sound/i })).toBeInTheDocument();
+      expect(
+        screen.getByRole("switch", { name: /scanlines/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("switch", { name: /starfield/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("switch", { name: /matrix/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("switch", { name: /sound/i }),
+      ).toBeInTheDocument();
     });
 
     it("reflects current settings state in toggle aria-checked", () => {
       renderPanel({
-        settings: { scanlines: true, matrixRain: false, sound: false },
+        settings: {
+          scanlines: true,
+          starfield: true,
+          matrixRain: false,
+          sound: false,
+        },
       });
-      expect(screen.getByRole("switch", { name: /scanlines/i })).toHaveAttribute(
-        "aria-checked",
-        "true",
-      );
-      expect(screen.getByRole("switch", { name: /matrix/i })).toHaveAttribute(
-        "aria-checked",
-        "false",
-      );
+      expect(
+        screen.getByRole("switch", { name: /scanlines/i }),
+      ).toHaveAttribute("aria-checked", "true");
+      expect(
+        screen.getByRole("switch", { name: /starfield/i }),
+      ).toHaveAttribute("aria-checked", "true");
+      expect(
+        screen.getByRole("switch", { name: /matrix/i }),
+      ).toHaveAttribute("aria-checked", "false");
     });
 
     it("does not mark any toggle as placeholder (all toggles are active)", () => {
@@ -79,6 +95,12 @@ describe("SettingsPanel", () => {
       const { onToggle } = renderPanel();
       fireEvent.click(screen.getByRole("switch", { name: /matrix/i }));
       expect(onToggle).toHaveBeenCalledWith("matrixRain");
+    });
+
+    it("calls onToggle('starfield') when starfield switch is clicked", () => {
+      const { onToggle } = renderPanel();
+      fireEvent.click(screen.getByRole("switch", { name: /starfield/i }));
+      expect(onToggle).toHaveBeenCalledWith("starfield");
     });
 
     it("calls onToggle('sound') when sound switch is clicked", () => {
@@ -122,6 +144,15 @@ describe("SettingsPanel", () => {
       expect(onToggle).toHaveBeenCalledWith("matrixRain");
     });
 
+    it("Enter key on starfield toggle triggers onToggle", async () => {
+      const user = userEvent.setup();
+      const { onToggle } = renderPanel();
+      const toggle = screen.getByRole("switch", { name: /starfield/i });
+      toggle.focus();
+      await user.keyboard("{Enter}");
+      expect(onToggle).toHaveBeenCalledWith("starfield");
+    });
+
     it("has a close button", () => {
       renderPanel();
       expect(screen.getByRole("button", { name: /close/i })).toBeInTheDocument();
@@ -149,30 +180,40 @@ describe("SettingsPanel", () => {
   describe("persistence integration", () => {
     it("settings prop drives aria-checked state updates", () => {
       const { rerender } = renderPanel({
-        settings: { scanlines: true, matrixRain: false, sound: false },
+        settings: {
+          scanlines: true,
+          starfield: true,
+          matrixRain: false,
+          sound: false,
+        },
       });
 
       rerender(
         <SettingsPanel
           open={true}
-          settings={{ scanlines: false, matrixRain: true, sound: true }}
+          settings={{
+            scanlines: false,
+            starfield: false,
+            matrixRain: true,
+            sound: true,
+          }}
           onToggle={vi.fn()}
           onClose={vi.fn()}
         />,
       );
 
-      expect(screen.getByRole("switch", { name: /scanlines/i })).toHaveAttribute(
-        "aria-checked",
-        "false",
-      );
-      expect(screen.getByRole("switch", { name: /matrix/i })).toHaveAttribute(
-        "aria-checked",
-        "true",
-      );
-      expect(screen.getByRole("switch", { name: /sound/i })).toHaveAttribute(
-        "aria-checked",
-        "true",
-      );
+      expect(
+        screen.getByRole("switch", { name: /scanlines/i }),
+      ).toHaveAttribute("aria-checked", "false");
+      expect(
+        screen.getByRole("switch", { name: /starfield/i }),
+      ).toHaveAttribute("aria-checked", "false");
+      expect(
+        screen.getByRole("switch", { name: /matrix/i }),
+      ).toHaveAttribute("aria-checked", "true");
+      expect(
+        screen.getByRole("switch", { name: /sound/i }),
+      ).toHaveAttribute("aria-checked", "true");
     });
   });
 });
