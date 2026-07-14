@@ -58,7 +58,7 @@ function createStars(width: number, height: number): Star[] {
       x: rng() * width,
       y: rng() * height,
       radius: rng() < 0.7 ? 0.5 : 1.0,   // most are 0.5px, a few are 1px
-      opacity: 0.15 + rng() * 0.7,        // 0.15–0.85
+      opacity: 0.35 + rng() * 0.6,        // 0.35–0.95
       driftX: -3 + rng() * 6,              // -3 to +3 px/s
       driftY: -2 + rng() * 4,              // -2 to +2 px/s
       twinkleSpeed: 0.3 + rng() * 1.2,     // 0.3–1.5 rad/s
@@ -149,13 +149,15 @@ export default function FuturisticBackground({
       s.twinklePhase += s.twinkleSpeed * frameDt;
       if (s.twinklePhase > Math.PI * 2) s.twinklePhase -= Math.PI * 2;
 
-      // Twinkle modulates opacity sinusoidally around base opacity
+      // Twinkle modulates opacity sinusoidally around base opacity.
+      // Range: opacity × 0.7  to  opacity × 1.0 (gentler fade so stars
+      // never disappear completely).
       const twinkle = 0.5 + 0.5 * Math.sin(s.twinklePhase);
-      const alpha = s.opacity * (0.5 + 0.5 * twinkle);
+      const alpha = s.opacity * (0.7 + 0.3 * twinkle);
 
-      // Cyan-tinted white: mostly white with slight cyan hue
-      const r = Math.floor(220 * alpha + 35);
-      const g = Math.floor(235 * alpha + 20);
+      // Cool cyan-white: shift toward white with a subtle cyan cast.
+      const r = Math.floor(230 * alpha + 25);
+      const g = Math.floor(250 * alpha + 5);
       const b = Math.floor(255 * alpha);
 
       ctx.beginPath();

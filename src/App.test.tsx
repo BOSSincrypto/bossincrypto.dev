@@ -36,7 +36,6 @@ describe("App", () => {
     await renderApp();
     const main = document.querySelector("main");
     expect(main).not.toBeNull();
-    expect(main).toHaveClass("bg-terminal-bg");
     expect(main).toHaveClass("font-mono");
   });
 

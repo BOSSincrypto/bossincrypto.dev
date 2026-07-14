@@ -185,7 +185,7 @@ export default function App() {
         </Suspense>
       )}
 
-      <main className="relative z-10 min-h-screen bg-terminal-bg font-mono text-terminal-green p-2 sm:p-4 md:p-8">
+      <main className="relative z-10 min-h-screen font-mono text-terminal-green p-2 sm:p-4 md:p-8">
         <div className="mx-auto w-full max-w-4xl">
           <motion.div
             className="text-sm text-terminal-cyan"
