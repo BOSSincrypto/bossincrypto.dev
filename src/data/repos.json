@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-16T19:22:07Z",
-    "pushedAt": "2026-07-16T19:22:01Z",
+    "updatedAt": "2026-07-17T03:17:58Z",
+    "pushedAt": "2026-07-17T03:17:54Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -506,24 +506,24 @@
     "id": 1302022101,
     "name": "vuzora-site",
     "displayName": "Vuzora Site",
-    "description": "",
+    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
     "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
-    "homepage": null,
+    "homepage": "http://vuzora.ru/",
     "language": "TypeScript",
     "languages": [
       "TypeScript"
     ],
     "topics": [],
-    "category": "web-apps",
+    "category": "telegram-bots",
     "license": null,
     "isFork": false,
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-07-16T23:54:51Z",
+    "updatedAt": "2026-07-17T07:03:20Z",
     "pushedAt": "2026-07-16T23:54:47Z",
     "featured": false,
-    "summary": ""
+    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1300291907,
@@ -559,8 +559,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-16T19:02:48Z",
-    "pushedAt": "2026-07-16T19:02:30Z",
+    "updatedAt": "2026-07-17T02:10:02Z",
+    "pushedAt": "2026-07-17T02:09:59Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
