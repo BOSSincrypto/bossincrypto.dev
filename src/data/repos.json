@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-17T03:17:58Z",
-    "pushedAt": "2026-07-17T03:17:54Z",
+    "updatedAt": "2026-07-17T08:21:10Z",
+    "pushedAt": "2026-07-17T08:20:36Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -503,27 +503,57 @@
     "summary": ""
   },
   {
-    "id": 1302022101,
-    "name": "vuzora-site",
-    "displayName": "Vuzora Site",
-    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
-    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
-    "homepage": "http://vuzora.ru/",
-    "language": "TypeScript",
+    "id": 1298282383,
+    "name": "PinMe",
+    "displayName": "PinMe",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
+    "homepage": null,
+    "language": "Kotlin",
     "languages": [
-      "TypeScript"
+      "Kotlin"
     ],
     "topics": [],
-    "category": "telegram-bots",
+    "category": "mobile-apps",
     "license": null,
     "isFork": false,
     "stars": 0,
     "forks": 0,
-    "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-07-17T07:03:20Z",
-    "pushedAt": "2026-07-16T23:54:47Z",
+    "createdAt": "2026-07-12T12:57:14Z",
+    "updatedAt": "2026-07-17T12:21:49Z",
+    "pushedAt": "2026-07-17T12:24:37Z",
     "featured": false,
-    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
+    "summary": ""
+  },
+  {
+    "id": 1303782396,
+    "name": "very-important-dates",
+    "displayName": "Very Important Dates",
+    "description": "VID — fast, private Android app for the dates you cannot miss",
+    "htmlUrl": "https://github.com/BOSSincrypto/very-important-dates",
+    "homepage": "https://github.com/BOSSincrypto/very-important-dates/releases/latest",
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [
+      "android",
+      "backup",
+      "important-dates",
+      "jetpack-compose",
+      "kotlin",
+      "privacy-first"
+    ],
+    "category": "mobile-apps",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-17T08:55:07Z",
+    "updatedAt": "2026-07-17T11:43:27Z",
+    "pushedAt": "2026-07-17T11:43:25Z",
+    "featured": false,
+    "summary": "VID — fast, private Android app for the dates you cannot miss"
   },
   {
     "id": 1300291907,
@@ -559,33 +589,33 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-17T02:10:02Z",
-    "pushedAt": "2026-07-17T02:09:59Z",
+    "updatedAt": "2026-07-17T08:01:22Z",
+    "pushedAt": "2026-07-17T08:01:00Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
   {
-    "id": 1298282383,
-    "name": "PinMe",
-    "displayName": "PinMe",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
-    "homepage": null,
-    "language": "Kotlin",
+    "id": 1302022101,
+    "name": "vuzora-site",
+    "displayName": "Vuzora Site",
+    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
+    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
+    "homepage": "http://vuzora.ru/",
+    "language": "TypeScript",
     "languages": [
-      "Kotlin"
+      "TypeScript"
     ],
     "topics": [],
-    "category": "mobile-apps",
+    "category": "telegram-bots",
     "license": null,
     "isFork": false,
     "stars": 0,
     "forks": 0,
-    "createdAt": "2026-07-12T12:57:14Z",
-    "updatedAt": "2026-07-13T14:14:21Z",
-    "pushedAt": "2026-07-13T14:12:18Z",
+    "createdAt": "2026-07-15T20:41:10Z",
+    "updatedAt": "2026-07-17T07:03:20Z",
+    "pushedAt": "2026-07-16T23:54:47Z",
     "featured": false,
-    "summary": ""
+    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1298317300,
