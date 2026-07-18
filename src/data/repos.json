@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-17T19:20:06Z",
-    "pushedAt": "2026-07-17T19:20:01Z",
+    "updatedAt": "2026-07-18T02:55:08Z",
+    "pushedAt": "2026-07-18T02:55:04Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -520,33 +520,10 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-07-17T19:50:26Z",
-    "pushedAt": "2026-07-17T19:50:05Z",
+    "updatedAt": "2026-07-18T07:34:55Z",
+    "pushedAt": "2026-07-18T07:34:38Z",
     "featured": false,
     "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
-  },
-  {
-    "id": 1298282383,
-    "name": "PinMe",
-    "displayName": "PinMe",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [],
-    "category": "mobile-apps",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-12T12:57:14Z",
-    "updatedAt": "2026-07-17T19:09:49Z",
-    "pushedAt": "2026-07-17T19:13:29Z",
-    "featured": false,
-    "summary": ""
   },
   {
     "id": 1300291907,
@@ -582,10 +559,33 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-17T19:00:29Z",
-    "pushedAt": "2026-07-17T19:00:12Z",
+    "updatedAt": "2026-07-18T01:59:21Z",
+    "pushedAt": "2026-07-18T01:59:17Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
+  },
+  {
+    "id": 1298282383,
+    "name": "PinMe",
+    "displayName": "PinMe",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-12T12:57:14Z",
+    "updatedAt": "2026-07-17T19:09:49Z",
+    "pushedAt": "2026-07-17T19:13:29Z",
+    "featured": false,
+    "summary": ""
   },
   {
     "id": 1303782396,
