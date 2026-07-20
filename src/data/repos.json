@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-20T03:40:25Z",
-    "pushedAt": "2026-07-20T03:40:17Z",
+    "updatedAt": "2026-07-20T09:26:45Z",
+    "pushedAt": "2026-07-20T09:26:17Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -503,6 +503,82 @@
     "summary": ""
   },
   {
+    "id": 1302022101,
+    "name": "vuzora-site",
+    "displayName": "Vuzora Site",
+    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
+    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
+    "homepage": "http://vuzora.ru/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [],
+    "category": "telegram-bots",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-15T20:41:10Z",
+    "updatedAt": "2026-07-20T13:25:15Z",
+    "pushedAt": "2026-07-20T13:23:44Z",
+    "featured": false,
+    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
+  },
+  {
+    "id": 1298282383,
+    "name": "PinMe",
+    "displayName": "PinMe",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-12T12:57:14Z",
+    "updatedAt": "2026-07-20T10:03:23Z",
+    "pushedAt": "2026-07-20T10:06:32Z",
+    "featured": false,
+    "summary": ""
+  },
+  {
+    "id": 1303782396,
+    "name": "very-important-dates",
+    "displayName": "Very Important Dates",
+    "description": "VID — fast, private Android app for the dates you cannot miss",
+    "htmlUrl": "https://github.com/BOSSincrypto/very-important-dates",
+    "homepage": "https://github.com/BOSSincrypto/very-important-dates/releases/latest",
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [
+      "android",
+      "backup",
+      "important-dates",
+      "jetpack-compose",
+      "kotlin",
+      "privacy-first"
+    ],
+    "category": "mobile-apps",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-17T08:55:07Z",
+    "updatedAt": "2026-07-20T09:53:26Z",
+    "pushedAt": "2026-07-20T09:52:25Z",
+    "featured": false,
+    "summary": "VID — fast, private Android app for the dates you cannot miss"
+  },
+  {
     "id": 1300291907,
     "name": "bossincrypto.dev",
     "displayName": "Bossincrypto.dev",
@@ -536,8 +612,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-20T02:30:55Z",
-    "pushedAt": "2026-07-20T02:30:51Z",
+    "updatedAt": "2026-07-20T08:49:25Z",
+    "pushedAt": "2026-07-20T08:49:19Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -598,29 +674,6 @@
     "summary": "A refined Markdown studio built for writers, engineers, and thinkers"
   },
   {
-    "id": 1302022101,
-    "name": "vuzora-site",
-    "displayName": "Vuzora Site",
-    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
-    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
-    "homepage": "http://vuzora.ru/",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [],
-    "category": "telegram-bots",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-07-19T17:56:24Z",
-    "pushedAt": "2026-07-19T17:56:18Z",
-    "featured": false,
-    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
-  },
-  {
     "id": 1305722060,
     "name": "api-key-validator",
     "displayName": "Api Key Validator",
@@ -655,59 +708,6 @@
     "pushedAt": "2026-07-19T13:49:23Z",
     "featured": false,
     "summary": "Bulk-validate API keys for 100+ AI/dev providers in your browser — runs on your own GitHub Actions, zero server storage."
-  },
-  {
-    "id": 1298282383,
-    "name": "PinMe",
-    "displayName": "PinMe",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [],
-    "category": "mobile-apps",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-12T12:57:14Z",
-    "updatedAt": "2026-07-19T11:35:46Z",
-    "pushedAt": "2026-07-19T11:39:33Z",
-    "featured": false,
-    "summary": ""
-  },
-  {
-    "id": 1303782396,
-    "name": "very-important-dates",
-    "displayName": "Very Important Dates",
-    "description": "VID — fast, private Android app for the dates you cannot miss",
-    "htmlUrl": "https://github.com/BOSSincrypto/very-important-dates",
-    "homepage": "https://github.com/BOSSincrypto/very-important-dates/releases/latest",
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [
-      "android",
-      "backup",
-      "important-dates",
-      "jetpack-compose",
-      "kotlin",
-      "privacy-first"
-    ],
-    "category": "mobile-apps",
-    "license": "Apache-2.0",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-17T08:55:07Z",
-    "updatedAt": "2026-07-17T11:43:27Z",
-    "pushedAt": "2026-07-17T11:43:25Z",
-    "featured": false,
-    "summary": "VID — fast, private Android app for the dates you cannot miss"
   },
   {
     "id": 1298317300,
