@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-20T14:22:21Z",
-    "pushedAt": "2026-07-20T14:20:51Z",
+    "updatedAt": "2026-07-20T19:50:48Z",
+    "pushedAt": "2026-07-20T19:50:32Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -506,9 +506,9 @@
     "id": 1305959810,
     "name": "promptcraft",
     "displayName": "Promptcraft",
-    "description": "",
+    "description": "Interactive platform to master prompt engineering for AI models",
     "htmlUrl": "https://github.com/BOSSincrypto/promptcraft",
-    "homepage": null,
+    "homepage": "http://promptcraft.bossincrypto.dev/",
     "language": "TypeScript",
     "languages": [
       "TypeScript"
@@ -531,33 +531,10 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-19T19:00:38Z",
-    "updatedAt": "2026-07-20T19:37:54Z",
-    "pushedAt": "2026-07-20T19:37:49Z",
+    "updatedAt": "2026-07-20T22:06:28Z",
+    "pushedAt": "2026-07-20T22:05:57Z",
     "featured": false,
-    "summary": ""
-  },
-  {
-    "id": 1302022101,
-    "name": "vuzora-site",
-    "displayName": "Vuzora Site",
-    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
-    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
-    "homepage": "http://vuzora.ru/",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [],
-    "category": "telegram-bots",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-07-20T16:08:03Z",
-    "pushedAt": "2026-07-20T16:07:26Z",
-    "featured": false,
-    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
+    "summary": "Interactive platform to master prompt engineering for AI models"
   },
   {
     "id": 1300291907,
@@ -593,10 +570,33 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-20T13:56:33Z",
-    "pushedAt": "2026-07-20T13:55:09Z",
+    "updatedAt": "2026-07-20T19:38:23Z",
+    "pushedAt": "2026-07-20T19:38:11Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
+  },
+  {
+    "id": 1302022101,
+    "name": "vuzora-site",
+    "displayName": "Vuzora Site",
+    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
+    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
+    "homepage": "http://vuzora.ru/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [],
+    "category": "telegram-bots",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-15T20:41:10Z",
+    "updatedAt": "2026-07-20T16:08:03Z",
+    "pushedAt": "2026-07-20T16:07:26Z",
+    "featured": false,
+    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1298282383,
