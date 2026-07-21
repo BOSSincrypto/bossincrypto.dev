@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-20T19:50:48Z",
-    "pushedAt": "2026-07-20T19:50:32Z",
+    "updatedAt": "2026-07-21T03:20:18Z",
+    "pushedAt": "2026-07-21T03:20:09Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -503,40 +503,6 @@
     "summary": ""
   },
   {
-    "id": 1305959810,
-    "name": "promptcraft",
-    "displayName": "Promptcraft",
-    "description": "Interactive platform to master prompt engineering for AI models",
-    "htmlUrl": "https://github.com/BOSSincrypto/promptcraft",
-    "homepage": "http://promptcraft.bossincrypto.dev/",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [
-      "ai",
-      "education",
-      "learning",
-      "prompt-engineering",
-      "pwa",
-      "react",
-      "tailwindcss",
-      "typescript",
-      "vite",
-      "zustand"
-    ],
-    "category": "ai-ml",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-19T19:00:38Z",
-    "updatedAt": "2026-07-20T22:06:28Z",
-    "pushedAt": "2026-07-20T22:05:57Z",
-    "featured": false,
-    "summary": "Interactive platform to master prompt engineering for AI models"
-  },
-  {
     "id": 1300291907,
     "name": "bossincrypto.dev",
     "displayName": "Bossincrypto.dev",
@@ -570,10 +536,44 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-20T19:38:23Z",
-    "pushedAt": "2026-07-20T19:38:11Z",
+    "updatedAt": "2026-07-21T02:09:21Z",
+    "pushedAt": "2026-07-21T02:09:17Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
+  },
+  {
+    "id": 1305959810,
+    "name": "promptcraft",
+    "displayName": "Promptcraft",
+    "description": "Interactive platform to master prompt engineering for AI models",
+    "htmlUrl": "https://github.com/BOSSincrypto/promptcraft",
+    "homepage": "http://promptcraft.bossincrypto.dev/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "ai",
+      "education",
+      "learning",
+      "prompt-engineering",
+      "pwa",
+      "react",
+      "tailwindcss",
+      "typescript",
+      "vite",
+      "zustand"
+    ],
+    "category": "ai-ml",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-19T19:00:38Z",
+    "updatedAt": "2026-07-20T22:06:28Z",
+    "pushedAt": "2026-07-20T22:05:57Z",
+    "featured": false,
+    "summary": "Interactive platform to master prompt engineering for AI models"
   },
   {
     "id": 1302022101,
