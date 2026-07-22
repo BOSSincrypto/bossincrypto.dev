@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-21T14:11:17Z",
-    "pushedAt": "2026-07-21T14:08:39Z",
+    "updatedAt": "2026-07-21T19:41:52Z",
+    "pushedAt": "2026-07-21T19:40:19Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -503,38 +503,27 @@
     "summary": ""
   },
   {
-    "id": 1305959810,
-    "name": "promptcraft",
-    "displayName": "Promptcraft",
-    "description": "Interactive platform to master prompt engineering for AI models",
-    "htmlUrl": "https://github.com/BOSSincrypto/promptcraft",
-    "homepage": "http://promptcraft.bossincrypto.dev/",
-    "language": "TypeScript",
+    "id": 1307610394,
+    "name": "ai-model-rating",
+    "displayName": "Ai Model Rating",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/ai-model-rating",
+    "homepage": null,
+    "language": "JavaScript",
     "languages": [
-      "TypeScript"
+      "JavaScript"
     ],
-    "topics": [
-      "ai",
-      "education",
-      "learning",
-      "prompt-engineering",
-      "pwa",
-      "react",
-      "tailwindcss",
-      "typescript",
-      "vite",
-      "zustand"
-    ],
+    "topics": [],
     "category": "ai-ml",
-    "license": null,
+    "license": "MIT",
     "isFork": false,
     "stars": 0,
     "forks": 0,
-    "createdAt": "2026-07-19T19:00:38Z",
-    "updatedAt": "2026-07-21T16:35:40Z",
-    "pushedAt": "2026-07-21T16:35:33Z",
+    "createdAt": "2026-07-21T11:11:02Z",
+    "updatedAt": "2026-07-22T00:05:26Z",
+    "pushedAt": "2026-07-22T00:05:40Z",
     "featured": false,
-    "summary": "Interactive platform to master prompt engineering for AI models"
+    "summary": ""
   },
   {
     "id": 1300291907,
@@ -570,10 +559,44 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-21T13:28:13Z",
-    "pushedAt": "2026-07-21T13:27:25Z",
+    "updatedAt": "2026-07-21T19:13:24Z",
+    "pushedAt": "2026-07-21T19:12:29Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
+  },
+  {
+    "id": 1305959810,
+    "name": "promptcraft",
+    "displayName": "Promptcraft",
+    "description": "Interactive platform to master prompt engineering for AI models",
+    "htmlUrl": "https://github.com/BOSSincrypto/promptcraft",
+    "homepage": "http://promptcraft.bossincrypto.dev/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "ai",
+      "education",
+      "learning",
+      "prompt-engineering",
+      "pwa",
+      "react",
+      "tailwindcss",
+      "typescript",
+      "vite",
+      "zustand"
+    ],
+    "category": "ai-ml",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-19T19:00:38Z",
+    "updatedAt": "2026-07-21T16:35:40Z",
+    "pushedAt": "2026-07-21T16:35:33Z",
+    "featured": false,
+    "summary": "Interactive platform to master prompt engineering for AI models"
   },
   {
     "id": 1302022101,
@@ -597,27 +620,6 @@
     "pushedAt": "2026-07-21T12:52:13Z",
     "featured": false,
     "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
-  },
-  {
-    "id": 1307610394,
-    "name": "ai-model-rating",
-    "displayName": "Ai Model Rating",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/ai-model-rating",
-    "homepage": null,
-    "language": null,
-    "languages": [],
-    "topics": [],
-    "category": "ai-ml",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-21T11:11:02Z",
-    "updatedAt": "2026-07-21T11:11:02Z",
-    "pushedAt": "2026-07-21T11:11:02Z",
-    "featured": false,
-    "summary": ""
   },
   {
     "id": 1298282383,
