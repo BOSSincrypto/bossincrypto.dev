@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-22T08:39:49Z",
-    "pushedAt": "2026-07-22T08:38:11Z",
+    "updatedAt": "2026-07-22T19:36:10Z",
+    "pushedAt": "2026-07-22T19:36:00Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -159,6 +159,45 @@
     "pushedAt": "2026-07-06T21:48:32Z",
     "featured": false,
     "summary": "📊 Lightweight, privacy-first analytics for Telegram bots. Zero runtime dependencies. 22 metrics, Flask dashboard, funnels, DAU/WAU/MAU, GDPR-ready retention."
+  },
+  {
+    "id": 1300291907,
+    "name": "bossincrypto.dev",
+    "displayName": "Bossincrypto.dev",
+    "description": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion.",
+    "htmlUrl": "https://github.com/BOSSincrypto/bossincrypto.dev",
+    "homepage": "http://bossincrypto.dev/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "bossincrypto",
+      "crypto",
+      "cyberpunk",
+      "framer-motion",
+      "github-api",
+      "hackathon",
+      "oss",
+      "portfolio",
+      "react",
+      "showcase",
+      "tailwindcss",
+      "terminal",
+      "typescript",
+      "vite",
+      "web3"
+    ],
+    "category": "crypto-web3",
+    "license": null,
+    "isFork": false,
+    "stars": 1,
+    "forks": 0,
+    "createdAt": "2026-07-14T09:42:19Z",
+    "updatedAt": "2026-07-22T15:51:52Z",
+    "pushedAt": "2026-07-22T13:39:12Z",
+    "featured": false,
+    "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
   {
     "id": 1228701515,
@@ -503,12 +542,35 @@
     "summary": ""
   },
   {
+    "id": 1308375685,
+    "name": "tg-channel-summary-by-ai",
+    "displayName": "Tg Channel Summary By Ai",
+    "description": "A single-binary Go application that collects posts from public Telegram channels via t.me/s, summarizes them with AI (OpenRouter or custom OpenAI-compatible providers), and delivers daily digests to Telegram forum supergroups with topic support.",
+    "htmlUrl": "https://github.com/BOSSincrypto/tg-channel-summary-by-ai",
+    "homepage": null,
+    "language": "Go",
+    "languages": [
+      "Go"
+    ],
+    "topics": [],
+    "category": "ai-ml",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-22T04:27:07Z",
+    "updatedAt": "2026-07-22T22:07:00Z",
+    "pushedAt": "2026-07-22T22:06:34Z",
+    "featured": false,
+    "summary": "A single-binary Go application that collects posts from public Telegram channels via t.me/s, summarizes them with AI (OpenRouter or custom OpenAI-compatible providers), and delivers daily digests to Telegram forum supergroups with topic support."
+  },
+  {
     "id": 1307610394,
     "name": "ai-model-rating",
     "displayName": "Ai Model Rating",
     "description": "Aggregate leaderboard of LLM models across 5 public sources. Fast, static, zero-dependency.",
     "htmlUrl": "https://github.com/BOSSincrypto/ai-model-rating",
-    "homepage": null,
+    "homepage": "http://ai-model-rating.bossincrypto.dev/",
     "language": "JavaScript",
     "languages": [
       "JavaScript"
@@ -527,72 +589,10 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-21T11:11:02Z",
-    "updatedAt": "2026-07-22T12:56:08Z",
-    "pushedAt": "2026-07-22T12:55:15Z",
+    "updatedAt": "2026-07-22T19:08:52Z",
+    "pushedAt": "2026-07-22T19:08:14Z",
     "featured": false,
     "summary": "Aggregate leaderboard of LLM models across 5 public sources. Fast, static, zero-dependency."
-  },
-  {
-    "id": 1300291907,
-    "name": "bossincrypto.dev",
-    "displayName": "Bossincrypto.dev",
-    "description": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion.",
-    "htmlUrl": "https://github.com/BOSSincrypto/bossincrypto.dev",
-    "homepage": "http://bossincrypto.dev/",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [
-      "bossincrypto",
-      "crypto",
-      "cyberpunk",
-      "framer-motion",
-      "github-api",
-      "hackathon",
-      "oss",
-      "portfolio",
-      "react",
-      "showcase",
-      "tailwindcss",
-      "terminal",
-      "typescript",
-      "vite",
-      "web3"
-    ],
-    "category": "crypto-web3",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-22T08:20:09Z",
-    "pushedAt": "2026-07-22T08:19:08Z",
-    "featured": false,
-    "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
-  },
-  {
-    "id": 1308375685,
-    "name": "tg-channel-summary-by-ai",
-    "displayName": "Tg Channel Summary By Ai",
-    "description": "A single-binary Go application that collects posts from public Telegram channels via t.me/s, summarizes them with AI (OpenRouter or custom OpenAI-compatible providers), and delivers daily digests to Telegram forum supergroups with topic support.",
-    "htmlUrl": "https://github.com/BOSSincrypto/tg-channel-summary-by-ai",
-    "homepage": null,
-    "language": "Go",
-    "languages": [
-      "Go"
-    ],
-    "topics": [],
-    "category": "ai-ml",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-22T04:27:07Z",
-    "updatedAt": "2026-07-22T04:43:13Z",
-    "pushedAt": "2026-07-22T04:42:08Z",
-    "featured": false,
-    "summary": "A single-binary Go application that collects posts from public Telegram channels via t.me/s, summarizes them with AI (OpenRouter or custom OpenAI-compatible providers), and delivers daily digests to Telegram forum supergroups with topic support."
   },
   {
     "id": 1305959810,
