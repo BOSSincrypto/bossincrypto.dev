@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-23T14:18:12Z",
-    "pushedAt": "2026-07-23T14:16:23Z",
+    "updatedAt": "2026-07-23T19:28:50Z",
+    "pushedAt": "2026-07-23T19:28:46Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -161,6 +161,29 @@
     "summary": "📊 Lightweight, privacy-first analytics for Telegram bots. Zero runtime dependencies. 22 metrics, Flask dashboard, funnels, DAU/WAU/MAU, GDPR-ready retention."
   },
   {
+    "id": 1310332378,
+    "name": "agi-rating",
+    "displayName": "Agi Rating",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/agi-rating",
+    "homepage": null,
+    "language": "JavaScript",
+    "languages": [
+      "JavaScript"
+    ],
+    "topics": [],
+    "category": "web-apps",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 1,
+    "forks": 0,
+    "createdAt": "2026-07-23T20:16:09Z",
+    "updatedAt": "2026-07-23T22:21:22Z",
+    "pushedAt": "2026-07-23T22:21:19Z",
+    "featured": false,
+    "summary": ""
+  },
+  {
     "id": 1300291907,
     "name": "bossincrypto.dev",
     "displayName": "Bossincrypto.dev",
@@ -194,8 +217,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-23T13:47:25Z",
-    "pushedAt": "2026-07-23T13:45:19Z",
+    "updatedAt": "2026-07-23T19:07:19Z",
+    "pushedAt": "2026-07-23T19:07:06Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -538,29 +561,6 @@
     "createdAt": "2026-01-16T13:02:41Z",
     "updatedAt": "2026-01-27T21:23:59Z",
     "pushedAt": "2026-01-27T13:43:01Z",
-    "featured": false,
-    "summary": ""
-  },
-  {
-    "id": 1310090720,
-    "name": "agi-rating",
-    "displayName": "Agi Rating",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/agi-rating",
-    "homepage": "https://agi-rating.bossincrypto.dev/",
-    "language": "Svelte",
-    "languages": [
-      "Svelte"
-    ],
-    "topics": [],
-    "category": "utilities",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-23T15:27:34Z",
-    "updatedAt": "2026-07-23T18:51:05Z",
-    "pushedAt": "2026-07-23T18:51:01Z",
     "featured": false,
     "summary": ""
   },
