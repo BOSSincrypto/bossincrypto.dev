@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-23T19:28:50Z",
-    "pushedAt": "2026-07-23T19:28:46Z",
+    "updatedAt": "2026-07-24T03:19:54Z",
+    "pushedAt": "2026-07-24T03:19:50Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -161,29 +161,6 @@
     "summary": "📊 Lightweight, privacy-first analytics for Telegram bots. Zero runtime dependencies. 22 metrics, Flask dashboard, funnels, DAU/WAU/MAU, GDPR-ready retention."
   },
   {
-    "id": 1310332378,
-    "name": "agi-rating",
-    "displayName": "Agi Rating",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/agi-rating",
-    "homepage": null,
-    "language": "JavaScript",
-    "languages": [
-      "JavaScript"
-    ],
-    "topics": [],
-    "category": "web-apps",
-    "license": "MIT",
-    "isFork": false,
-    "stars": 1,
-    "forks": 0,
-    "createdAt": "2026-07-23T20:16:09Z",
-    "updatedAt": "2026-07-23T22:21:22Z",
-    "pushedAt": "2026-07-23T22:21:19Z",
-    "featured": false,
-    "summary": ""
-  },
-  {
     "id": 1300291907,
     "name": "bossincrypto.dev",
     "displayName": "Bossincrypto.dev",
@@ -217,10 +194,33 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-23T19:07:19Z",
-    "pushedAt": "2026-07-23T19:07:06Z",
+    "updatedAt": "2026-07-24T02:10:21Z",
+    "pushedAt": "2026-07-24T02:10:17Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
+  },
+  {
+    "id": 1310332378,
+    "name": "agi-rating",
+    "displayName": "Agi Rating",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/agi-rating",
+    "homepage": null,
+    "language": "JavaScript",
+    "languages": [
+      "JavaScript"
+    ],
+    "topics": [],
+    "category": "web-apps",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 1,
+    "forks": 0,
+    "createdAt": "2026-07-23T20:16:09Z",
+    "updatedAt": "2026-07-23T22:21:22Z",
+    "pushedAt": "2026-07-23T22:21:19Z",
+    "featured": false,
+    "summary": ""
   },
   {
     "id": 1228701515,
