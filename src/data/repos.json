@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-25T08:15:03Z",
-    "pushedAt": "2026-07-25T08:14:52Z",
+    "updatedAt": "2026-07-25T13:47:50Z",
+    "pushedAt": "2026-07-25T13:47:40Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-25T07:59:32Z",
-    "pushedAt": "2026-07-25T07:59:22Z",
+    "updatedAt": "2026-07-25T13:13:47Z",
+    "pushedAt": "2026-07-25T13:13:34Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,6 +542,27 @@
     "summary": ""
   },
   {
+    "id": 1312154860,
+    "name": "ai-model-rating",
+    "displayName": "Ai Model Rating",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/ai-model-rating",
+    "homepage": null,
+    "language": null,
+    "languages": [],
+    "topics": [],
+    "category": "ai-ml",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-25T16:53:57Z",
+    "updatedAt": "2026-07-25T16:53:58Z",
+    "pushedAt": "2026-07-25T16:53:58Z",
+    "featured": false,
+    "summary": ""
+  },
+  {
     "id": 1310966530,
     "name": "agi-rating",
     "displayName": "Agi Rating",
@@ -624,36 +645,6 @@
     "pushedAt": "2026-07-23T11:28:03Z",
     "featured": false,
     "summary": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026."
-  },
-  {
-    "id": 1307610394,
-    "name": "ai-model-rating",
-    "displayName": "Ai Model Rating",
-    "description": "Aggregate leaderboard of LLM models across 5 public sources. Fast, static, zero-dependency.",
-    "htmlUrl": "https://github.com/BOSSincrypto/ai-model-rating",
-    "homepage": "http://ai-model-rating.bossincrypto.dev/",
-    "language": "JavaScript",
-    "languages": [
-      "JavaScript"
-    ],
-    "topics": [
-      "ai",
-      "benchmark",
-      "github-pages",
-      "leaderboard",
-      "llm",
-      "static-site"
-    ],
-    "category": "ai-ml",
-    "license": "MIT",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-21T11:11:02Z",
-    "updatedAt": "2026-07-22T19:08:52Z",
-    "pushedAt": "2026-07-22T19:08:14Z",
-    "featured": false,
-    "summary": "Aggregate leaderboard of LLM models across 5 public sources. Fast, static, zero-dependency."
   },
   {
     "id": 1305959810,
