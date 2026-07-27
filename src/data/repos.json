@@ -71,10 +71,10 @@
     "category": "ai-ml",
     "license": "MIT",
     "isFork": false,
-    "stars": 6,
+    "stars": 7,
     "forks": 1,
     "createdAt": "2026-05-08T12:20:40Z",
-    "updatedAt": "2026-06-07T21:46:15Z",
+    "updatedAt": "2026-07-27T04:26:45Z",
     "pushedAt": "2026-05-30T10:17:19Z",
     "featured": false,
     "summary": "InkDown — Free, open-source WYSIWYG markdown editor. A beautiful, fast, privacy-first alternative to Typora for Windows, macOS & Linux."
@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-26T19:19:39Z",
-    "pushedAt": "2026-07-26T19:19:35Z",
+    "updatedAt": "2026-07-27T03:39:59Z",
+    "pushedAt": "2026-07-27T03:39:47Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-26T19:03:28Z",
-    "pushedAt": "2026-07-26T19:03:13Z",
+    "updatedAt": "2026-07-27T02:27:48Z",
+    "pushedAt": "2026-07-27T02:27:42Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -559,10 +559,33 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-26T20:45:29Z",
-    "updatedAt": "2026-07-26T23:59:34Z",
-    "pushedAt": "2026-07-26T23:58:03Z",
+    "updatedAt": "2026-07-27T07:36:13Z",
+    "pushedAt": "2026-07-27T07:35:51Z",
     "featured": false,
     "summary": "Learn to write prompts that actually work — for Claude, GPT, Gemini, Llama and every other model you use."
+  },
+  {
+    "id": 1313140355,
+    "name": "the-real-llm",
+    "displayName": "The Real Llm",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/the-real-llm",
+    "homepage": null,
+    "language": "Python",
+    "languages": [
+      "Python"
+    ],
+    "topics": [],
+    "category": "ai-ml",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-26T20:30:45Z",
+    "updatedAt": "2026-07-27T07:35:59Z",
+    "pushedAt": "2026-07-27T07:35:07Z",
+    "featured": false,
+    "summary": ""
   },
   {
     "id": 1313153294,
@@ -651,29 +674,6 @@
     "pushedAt": "2026-07-26T04:12:26Z",
     "featured": false,
     "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
-  },
-  {
-    "id": 1313140355,
-    "name": "the-real-llm",
-    "displayName": "The Real Llm",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/the-real-llm",
-    "homepage": null,
-    "language": "Python",
-    "languages": [
-      "Python"
-    ],
-    "topics": [],
-    "category": "ai-ml",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-26T20:30:45Z",
-    "updatedAt": "2026-07-26T21:29:44Z",
-    "pushedAt": "2026-07-27T00:44:29Z",
-    "featured": false,
-    "summary": ""
   },
   {
     "id": 1302022101,
