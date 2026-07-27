@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-27T03:39:59Z",
-    "pushedAt": "2026-07-27T03:39:47Z",
+    "updatedAt": "2026-07-27T10:03:54Z",
+    "pushedAt": "2026-07-27T10:01:50Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-27T02:27:48Z",
-    "pushedAt": "2026-07-27T02:27:42Z",
+    "updatedAt": "2026-07-27T09:41:54Z",
+    "pushedAt": "2026-07-27T09:40:47Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,6 +542,165 @@
     "summary": ""
   },
   {
+    "id": 1298282383,
+    "name": "PinMe",
+    "displayName": "PinMe",
+    "description": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров.",
+    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-12T12:57:14Z",
+    "updatedAt": "2026-07-27T13:40:20Z",
+    "pushedAt": "2026-07-27T13:41:39Z",
+    "featured": false,
+    "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
+  },
+  {
+    "id": 1303782396,
+    "name": "very-important-dates",
+    "displayName": "Very Important Dates",
+    "description": "VID — fast, private Android app for the dates you cannot miss",
+    "htmlUrl": "https://github.com/BOSSincrypto/very-important-dates",
+    "homepage": "https://github.com/BOSSincrypto/very-important-dates/releases/latest",
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [
+      "android",
+      "backup",
+      "important-dates",
+      "jetpack-compose",
+      "kotlin",
+      "privacy-first"
+    ],
+    "category": "mobile-apps",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-17T08:55:07Z",
+    "updatedAt": "2026-07-27T13:02:08Z",
+    "pushedAt": "2026-07-20T09:52:25Z",
+    "featured": false,
+    "summary": "VID — fast, private Android app for the dates you cannot miss"
+  },
+  {
+    "id": 1313140355,
+    "name": "the-real-llm",
+    "displayName": "The Real Llm",
+    "description": "llmverify is a lightweight Python tool for externally auditing LLM APIs and verifying whether custom providers and resellers truly serve the frontier models they claim to run, using layered probes and benchmark-based statistics.",
+    "htmlUrl": "https://github.com/BOSSincrypto/the-real-llm",
+    "homepage": null,
+    "language": "Python",
+    "languages": [
+      "Python"
+    ],
+    "topics": [
+      "ai-governance",
+      "anthropic-claude",
+      "api-verification",
+      "benchmark-evaluation",
+      "llm-audit",
+      "llm-security",
+      "llmverify",
+      "ml-infrastructure",
+      "model-verification",
+      "openrouter",
+      "python-tooling",
+      "vllm"
+    ],
+    "category": "ai-ml",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-26T20:30:45Z",
+    "updatedAt": "2026-07-27T12:55:25Z",
+    "pushedAt": "2026-07-27T07:35:07Z",
+    "featured": false,
+    "summary": "llmverify is a lightweight Python tool for externally auditing LLM APIs and verifying whether custom providers and resellers truly serve the frontier models they claim to run, using layered probes and benchmark-based statistics."
+  },
+  {
+    "id": 1313153294,
+    "name": "one-sentence-telegram-summary-bot",
+    "displayName": "One Sentence Telegram Summary Bot",
+    "description": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание.",
+    "htmlUrl": "https://github.com/BOSSincrypto/one-sentence-telegram-summary-bot",
+    "homepage": null,
+    "language": "Python",
+    "languages": [
+      "Python"
+    ],
+    "topics": [
+      "aiogram",
+      "channeldigest",
+      "digestbot",
+      "newsdigest",
+      "onesentencesummary",
+      "python",
+      "telegrambot",
+      "telegramchannelsummary"
+    ],
+    "category": "telegram-bots",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-26T20:52:09Z",
+    "updatedAt": "2026-07-27T12:45:24Z",
+    "pushedAt": "2026-07-26T22:12:03Z",
+    "featured": false,
+    "summary": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание."
+  },
+  {
+    "id": 1309830824,
+    "name": "llm-rating",
+    "displayName": "Llm Rating",
+    "description": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026.",
+    "htmlUrl": "https://github.com/BOSSincrypto/llm-rating",
+    "homepage": "https://llm-rating.bossincrypto.dev",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "ai",
+      "analytics",
+      "benchmark",
+      "chatbot-arena",
+      "claude",
+      "data-visualization",
+      "gemini",
+      "github-pages",
+      "gpt",
+      "leaderboard",
+      "llm",
+      "open-source",
+      "static-site",
+      "typescript"
+    ],
+    "category": "ai-ml",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-23T10:45:35Z",
+    "updatedAt": "2026-07-27T11:33:44Z",
+    "pushedAt": "2026-07-27T11:32:40Z",
+    "featured": false,
+    "summary": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026."
+  },
+  {
     "id": 1313149224,
     "name": "prompt-god",
     "displayName": "Prompt God",
@@ -563,52 +722,6 @@
     "pushedAt": "2026-07-27T07:35:51Z",
     "featured": false,
     "summary": "Learn to write prompts that actually work — for Claude, GPT, Gemini, Llama and every other model you use."
-  },
-  {
-    "id": 1313140355,
-    "name": "the-real-llm",
-    "displayName": "The Real Llm",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/the-real-llm",
-    "homepage": null,
-    "language": "Python",
-    "languages": [
-      "Python"
-    ],
-    "topics": [],
-    "category": "ai-ml",
-    "license": "Apache-2.0",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-26T20:30:45Z",
-    "updatedAt": "2026-07-27T07:35:59Z",
-    "pushedAt": "2026-07-27T07:35:07Z",
-    "featured": false,
-    "summary": ""
-  },
-  {
-    "id": 1313153294,
-    "name": "one-sentence-telegram-summary-bot",
-    "displayName": "One Sentence Telegram Summary Bot",
-    "description": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание.",
-    "htmlUrl": "https://github.com/BOSSincrypto/one-sentence-telegram-summary-bot",
-    "homepage": null,
-    "language": "Python",
-    "languages": [
-      "Python"
-    ],
-    "topics": [],
-    "category": "telegram-bots",
-    "license": "MIT",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-26T20:52:09Z",
-    "updatedAt": "2026-07-26T22:19:12Z",
-    "pushedAt": "2026-07-26T22:12:03Z",
-    "featured": false,
-    "summary": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание."
   },
   {
     "id": 1313145046,
@@ -651,29 +764,6 @@
     "pushedAt": "2026-07-26T21:59:25Z",
     "featured": false,
     "summary": "Every LLM leaderboard on one scale — 53 benchmarks, 6 arenas and live pricing, weighted by what you actually need. "
-  },
-  {
-    "id": 1298282383,
-    "name": "PinMe",
-    "displayName": "PinMe",
-    "description": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров.",
-    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [],
-    "category": "mobile-apps",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-12T12:57:14Z",
-    "updatedAt": "2026-07-26T21:56:01Z",
-    "pushedAt": "2026-07-26T04:12:26Z",
-    "featured": false,
-    "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
   },
   {
     "id": 1302022101,
@@ -738,7 +828,7 @@
     "forks": 0,
     "createdAt": "2026-07-24T11:31:53Z",
     "updatedAt": "2026-07-24T23:01:47Z",
-    "pushedAt": "2026-07-24T23:01:43Z",
+    "pushedAt": "2026-07-27T12:29:09Z",
     "featured": false,
     "summary": "AGI Rating is a web application that aggregates LLM model ratings from multiple authoritative sources into one unified, filterable, and analytically rich interface. It provides a comprehensive view of the AI landscape, allowing you to compare models across different benchmarks, pricing tiers, and performance metrics."
   },
@@ -764,44 +854,6 @@
     "pushedAt": "2026-07-24T17:54:37Z",
     "featured": false,
     "summary": "A single-binary Go application that collects posts from public Telegram channels via t.me/s, summarizes them with AI (OpenRouter or custom OpenAI-compatible providers), and delivers daily digests to Telegram forum supergroups with topic support."
-  },
-  {
-    "id": 1309830824,
-    "name": "llm-rating",
-    "displayName": "Llm Rating",
-    "description": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026.",
-    "htmlUrl": "https://github.com/BOSSincrypto/llm-rating",
-    "homepage": "https://llm-rating.bossincrypto.dev",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [
-      "ai",
-      "analytics",
-      "benchmark",
-      "chatbot-arena",
-      "claude",
-      "data-visualization",
-      "gemini",
-      "github-pages",
-      "gpt",
-      "leaderboard",
-      "llm",
-      "open-source",
-      "static-site",
-      "typescript"
-    ],
-    "category": "ai-ml",
-    "license": "MIT",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-23T10:45:35Z",
-    "updatedAt": "2026-07-23T11:31:22Z",
-    "pushedAt": "2026-07-23T11:28:03Z",
-    "featured": false,
-    "summary": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026."
   },
   {
     "id": 1305959810,
@@ -836,36 +888,6 @@
     "pushedAt": "2026-07-21T16:35:33Z",
     "featured": false,
     "summary": "Interactive platform to master prompt engineering for AI models"
-  },
-  {
-    "id": 1303782396,
-    "name": "very-important-dates",
-    "displayName": "Very Important Dates",
-    "description": "VID — fast, private Android app for the dates you cannot miss",
-    "htmlUrl": "https://github.com/BOSSincrypto/very-important-dates",
-    "homepage": "https://github.com/BOSSincrypto/very-important-dates/releases/latest",
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [
-      "android",
-      "backup",
-      "important-dates",
-      "jetpack-compose",
-      "kotlin",
-      "privacy-first"
-    ],
-    "category": "mobile-apps",
-    "license": "Apache-2.0",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-17T08:55:07Z",
-    "updatedAt": "2026-07-20T09:53:26Z",
-    "pushedAt": "2026-07-20T09:52:25Z",
-    "featured": false,
-    "summary": "VID — fast, private Android app for the dates you cannot miss"
   },
   {
     "id": 1305867346,
