@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-07-27T19:45:14Z",
-    "pushedAt": "2026-07-27T19:43:49Z",
+    "updatedAt": "2026-07-28T02:56:15Z",
+    "pushedAt": "2026-07-28T02:56:10Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-07-27T19:20:40Z",
-    "pushedAt": "2026-07-27T19:19:40Z",
+    "updatedAt": "2026-07-28T02:03:15Z",
+    "pushedAt": "2026-07-28T02:03:10Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,6 +542,29 @@
     "summary": ""
   },
   {
+    "id": 1298282383,
+    "name": "PinMe",
+    "displayName": "PinMe",
+    "description": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров.",
+    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-12T12:57:14Z",
+    "updatedAt": "2026-07-28T07:42:57Z",
+    "pushedAt": "2026-07-28T07:45:00Z",
+    "featured": false,
+    "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
+  },
+  {
     "id": 1313140355,
     "name": "the-real-llm",
     "displayName": "The Real Llm",
@@ -576,29 +599,6 @@
     "pushedAt": "2026-07-27T16:26:31Z",
     "featured": false,
     "summary": "llmverify is a lightweight Python tool for externally auditing LLM APIs and verifying whether custom providers and resellers truly serve the frontier models they claim to run, using layered probes and benchmark-based statistics."
-  },
-  {
-    "id": 1298282383,
-    "name": "PinMe",
-    "displayName": "PinMe",
-    "description": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров.",
-    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [],
-    "category": "mobile-apps",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-12T12:57:14Z",
-    "updatedAt": "2026-07-27T13:40:20Z",
-    "pushedAt": "2026-07-27T13:41:39Z",
-    "featured": false,
-    "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
   },
   {
     "id": 1303782396,
