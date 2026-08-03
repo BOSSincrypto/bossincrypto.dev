@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-02T13:41:20Z",
-    "pushedAt": "2026-08-02T13:41:08Z",
+    "updatedAt": "2026-08-02T19:19:29Z",
+    "pushedAt": "2026-08-02T19:19:22Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-02T13:09:25Z",
-    "pushedAt": "2026-08-02T13:09:08Z",
+    "updatedAt": "2026-08-02T19:02:11Z",
+    "pushedAt": "2026-08-02T19:02:07Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,27 +542,27 @@
     "summary": ""
   },
   {
-    "id": 1320414876,
-    "name": "test",
-    "displayName": "Test",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/test",
-    "homepage": null,
-    "language": "Shell",
+    "id": 1302022101,
+    "name": "vuzora-site",
+    "displayName": "Vuzora Site",
+    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
+    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
+    "homepage": "http://vuzora.ru/",
+    "language": "JavaScript",
     "languages": [
-      "Shell"
+      "JavaScript"
     ],
     "topics": [],
-    "category": "utilities",
+    "category": "telegram-bots",
     "license": null,
     "isFork": false,
     "stars": 0,
     "forks": 0,
-    "createdAt": "2026-08-02T17:15:39Z",
-    "updatedAt": "2026-08-02T18:54:29Z",
-    "pushedAt": "2026-08-02T18:54:10Z",
+    "createdAt": "2026-07-15T20:41:10Z",
+    "updatedAt": "2026-08-02T22:58:09Z",
+    "pushedAt": "2026-08-02T22:58:05Z",
     "featured": false,
-    "summary": ""
+    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1316475503,
@@ -763,7 +763,7 @@
     "forks": 0,
     "createdAt": "2026-07-26T20:45:29Z",
     "updatedAt": "2026-07-27T07:36:13Z",
-    "pushedAt": "2026-07-27T07:35:51Z",
+    "pushedAt": "2026-08-02T21:33:40Z",
     "featured": false,
     "summary": "Learn to write prompts that actually work — for Claude, GPT, Gemini, Llama and every other model you use."
   },
@@ -808,29 +808,6 @@
     "pushedAt": "2026-07-26T21:59:25Z",
     "featured": false,
     "summary": "Every LLM leaderboard on one scale — 53 benchmarks, 6 arenas and live pricing, weighted by what you actually need. "
-  },
-  {
-    "id": 1302022101,
-    "name": "vuzora-site",
-    "displayName": "Vuzora Site",
-    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
-    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
-    "homepage": "http://vuzora.ru/",
-    "language": "JavaScript",
-    "languages": [
-      "JavaScript"
-    ],
-    "topics": [],
-    "category": "telegram-bots",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-07-26T20:04:57Z",
-    "pushedAt": "2026-07-26T20:04:50Z",
-    "featured": false,
-    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1312154860,
