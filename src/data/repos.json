@@ -32,8 +32,8 @@
     "stars": 17,
     "forks": 1,
     "createdAt": "2026-05-29T21:23:23Z",
-    "updatedAt": "2026-08-07T18:23:16Z",
-    "pushedAt": "2026-08-07T18:23:32Z",
+    "updatedAt": "2026-08-09T10:16:20Z",
+    "pushedAt": "2026-08-09T10:33:06Z",
     "featured": false,
     "summary": "Desktop GUI for microsoft/markitdown — convert PDF, Word, Excel, PowerPoint, images & audio to Markdown. Windows · macOS · Linux. No cloud."
   },
@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-09T02:07:00Z",
-    "pushedAt": "2026-08-09T02:06:57Z",
+    "updatedAt": "2026-08-09T07:05:03Z",
+    "pushedAt": "2026-08-09T07:04:52Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-09T01:16:33Z",
-    "pushedAt": "2026-08-09T01:16:30Z",
+    "updatedAt": "2026-08-09T06:46:10Z",
+    "pushedAt": "2026-08-09T06:45:56Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
