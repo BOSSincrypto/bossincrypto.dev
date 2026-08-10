@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-10T02:11:29Z",
-    "pushedAt": "2026-08-10T02:11:25Z",
+    "updatedAt": "2026-08-10T07:51:48Z",
+    "pushedAt": "2026-08-10T07:51:40Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-10T01:18:25Z",
-    "pushedAt": "2026-08-10T01:18:20Z",
+    "updatedAt": "2026-08-10T07:22:33Z",
+    "pushedAt": "2026-08-10T07:20:57Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,6 +542,74 @@
     "summary": ""
   },
   {
+    "id": 1329678200,
+    "name": "SnapPlay",
+    "displayName": "SnapPlay",
+    "description": "Fast, minimal Android video player with global playback speed and Picture-in-Picture",
+    "htmlUrl": "https://github.com/BOSSincrypto/SnapPlay",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [
+      "android",
+      "jetpack-compose",
+      "kotlin",
+      "media3",
+      "picture-in-picture",
+      "video-player"
+    ],
+    "category": "mobile-apps",
+    "license": "NOASSERTION",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-10T10:04:22Z",
+    "updatedAt": "2026-08-10T10:57:01Z",
+    "pushedAt": "2026-08-10T11:11:29Z",
+    "featured": false,
+    "summary": "Fast, minimal Android video player with global playback speed and Picture-in-Picture"
+  },
+  {
+    "id": 1309830824,
+    "name": "llm-rating",
+    "displayName": "Llm Rating",
+    "description": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026.",
+    "htmlUrl": "https://github.com/BOSSincrypto/llm-rating",
+    "homepage": "https://llm-rating.bossincrypto.dev",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "ai",
+      "analytics",
+      "benchmark",
+      "chatbot-arena",
+      "claude",
+      "data-visualization",
+      "gemini",
+      "github-pages",
+      "gpt",
+      "leaderboard",
+      "llm",
+      "open-source",
+      "static-site",
+      "typescript"
+    ],
+    "category": "ai-ml",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-23T10:45:35Z",
+    "updatedAt": "2026-08-10T09:40:32Z",
+    "pushedAt": "2026-08-10T09:40:14Z",
+    "featured": false,
+    "summary": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026."
+  },
+  {
     "id": 1302022101,
     "name": "vuzora-site",
     "displayName": "Vuzora Site",
@@ -639,44 +707,6 @@
     "pushedAt": "2026-08-04T22:35:53Z",
     "featured": false,
     "summary": ""
-  },
-  {
-    "id": 1309830824,
-    "name": "llm-rating",
-    "displayName": "Llm Rating",
-    "description": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026.",
-    "htmlUrl": "https://github.com/BOSSincrypto/llm-rating",
-    "homepage": "https://llm-rating.bossincrypto.dev",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [
-      "ai",
-      "analytics",
-      "benchmark",
-      "chatbot-arena",
-      "claude",
-      "data-visualization",
-      "gemini",
-      "github-pages",
-      "gpt",
-      "leaderboard",
-      "llm",
-      "open-source",
-      "static-site",
-      "typescript"
-    ],
-    "category": "ai-ml",
-    "license": "MIT",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-23T10:45:35Z",
-    "updatedAt": "2026-08-03T11:37:17Z",
-    "pushedAt": "2026-08-03T11:34:55Z",
-    "featured": false,
-    "summary": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026."
   },
   {
     "id": 1313140355,
@@ -851,7 +881,7 @@
     "forks": 0,
     "createdAt": "2026-07-24T11:31:53Z",
     "updatedAt": "2026-07-24T23:01:47Z",
-    "pushedAt": "2026-08-03T12:30:26Z",
+    "pushedAt": "2026-08-10T10:21:23Z",
     "featured": false,
     "summary": "AGI Rating is a web application that aggregates LLM model ratings from multiple authoritative sources into one unified, filterable, and analytically rich interface. It provides a comprehensive view of the AI landscape, allowing you to compare models across different benchmarks, pricing tiers, and performance metrics."
   },
