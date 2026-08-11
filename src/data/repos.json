@@ -29,10 +29,10 @@
     "category": "developer-tools",
     "license": "MIT",
     "isFork": false,
-    "stars": 17,
+    "stars": 18,
     "forks": 1,
     "createdAt": "2026-05-29T21:23:23Z",
-    "updatedAt": "2026-08-09T19:33:42Z",
+    "updatedAt": "2026-08-11T09:57:39Z",
     "pushedAt": "2026-08-09T19:34:36Z",
     "featured": false,
     "summary": "Desktop GUI for microsoft/markitdown — convert PDF, Word, Excel, PowerPoint, images & audio to Markdown. Windows · macOS · Linux. No cloud."
@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-11T02:07:07Z",
-    "pushedAt": "2026-08-11T02:06:53Z",
+    "updatedAt": "2026-08-11T07:17:22Z",
+    "pushedAt": "2026-08-11T07:17:09Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-11T01:16:37Z",
-    "pushedAt": "2026-08-11T01:16:27Z",
+    "updatedAt": "2026-08-11T06:57:39Z",
+    "pushedAt": "2026-08-11T06:57:36Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,6 +542,59 @@
     "summary": ""
   },
   {
+    "id": 1330879476,
+    "name": "minimal-video",
+    "displayName": "Minimal Video",
+    "description": "",
+    "htmlUrl": "https://github.com/BOSSincrypto/minimal-video",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-11T12:08:02Z",
+    "updatedAt": "2026-08-11T12:14:29Z",
+    "pushedAt": "2026-08-11T12:52:02Z",
+    "featured": false,
+    "summary": ""
+  },
+  {
+    "id": 1329678200,
+    "name": "SnapPlay",
+    "displayName": "SnapPlay",
+    "description": "Fast, minimal Android video player with global playback speed and Picture-in-Picture",
+    "htmlUrl": "https://github.com/BOSSincrypto/SnapPlay",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [
+      "android",
+      "jetpack-compose",
+      "kotlin",
+      "media3",
+      "picture-in-picture",
+      "video-player"
+    ],
+    "category": "mobile-apps",
+    "license": "NOASSERTION",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-10T10:04:22Z",
+    "updatedAt": "2026-08-11T07:43:40Z",
+    "pushedAt": "2026-08-11T07:46:03Z",
+    "featured": false,
+    "summary": "Fast, minimal Android video player with global playback speed and Picture-in-Picture"
+  },
+  {
     "id": 1330034885,
     "name": "SwiftPlayer",
     "displayName": "SwiftPlayer",
@@ -574,59 +627,6 @@
     "pushedAt": "2026-08-10T22:54:01Z",
     "featured": false,
     "summary": "Fast, privacy-first Android video player built with Kotlin, Jetpack Compose, and Media3."
-  },
-  {
-    "id": 1329839442,
-    "name": "fast-video",
-    "displayName": "Fast Video",
-    "description": "",
-    "htmlUrl": "https://github.com/BOSSincrypto/fast-video",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [],
-    "category": "mobile-apps",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-08-10T13:09:55Z",
-    "updatedAt": "2026-08-10T14:00:33Z",
-    "pushedAt": "2026-08-10T14:20:26Z",
-    "featured": false,
-    "summary": ""
-  },
-  {
-    "id": 1329678200,
-    "name": "SnapPlay",
-    "displayName": "SnapPlay",
-    "description": "Fast, minimal Android video player with global playback speed and Picture-in-Picture",
-    "htmlUrl": "https://github.com/BOSSincrypto/SnapPlay",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [
-      "android",
-      "jetpack-compose",
-      "kotlin",
-      "media3",
-      "picture-in-picture",
-      "video-player"
-    ],
-    "category": "mobile-apps",
-    "license": "NOASSERTION",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-08-10T10:04:22Z",
-    "updatedAt": "2026-08-10T10:57:01Z",
-    "pushedAt": "2026-08-10T13:08:49Z",
-    "featured": false,
-    "summary": "Fast, minimal Android video player with global playback speed and Picture-in-Picture"
   },
   {
     "id": 1309830824,
