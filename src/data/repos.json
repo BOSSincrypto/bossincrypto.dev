@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-12T07:41:43Z",
-    "pushedAt": "2026-08-12T07:41:17Z",
+    "updatedAt": "2026-08-12T13:23:27Z",
+    "pushedAt": "2026-08-12T13:22:57Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-12T07:16:53Z",
-    "pushedAt": "2026-08-12T07:16:41Z",
+    "updatedAt": "2026-08-12T12:56:33Z",
+    "pushedAt": "2026-08-12T12:56:20Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -542,6 +542,52 @@
     "summary": ""
   },
   {
+    "id": 1332190494,
+    "name": "ReflexPlayer",
+    "displayName": "ReflexPlayer",
+    "description": "Fast, privacy-first Android video player powered by Media3",
+    "htmlUrl": "https://github.com/BOSSincrypto/ReflexPlayer",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-12T15:41:39Z",
+    "updatedAt": "2026-08-12T16:09:15Z",
+    "pushedAt": "2026-08-12T16:16:33Z",
+    "featured": false,
+    "summary": "Fast, privacy-first Android video player powered by Media3"
+  },
+  {
+    "id": 1332068770,
+    "name": "FlashPlay",
+    "displayName": "FlashPlay",
+    "description": "Ultra-responsive Android video player with global speed, PiP, Media3, benchmarks, and secure automated releases.",
+    "htmlUrl": "https://github.com/BOSSincrypto/FlashPlay",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-12T13:37:25Z",
+    "updatedAt": "2026-08-12T13:56:22Z",
+    "pushedAt": "2026-08-12T13:55:30Z",
+    "featured": false,
+    "summary": "Ultra-responsive Android video player with global speed, PiP, Media3, benchmarks, and secure automated releases."
+  },
+  {
     "id": 1302022101,
     "name": "vuzora-site",
     "displayName": "Vuzora Site",
@@ -559,8 +605,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-08-12T12:07:00Z",
-    "pushedAt": "2026-08-12T12:06:47Z",
+    "updatedAt": "2026-08-12T13:55:34Z",
+    "pushedAt": "2026-08-12T13:53:32Z",
     "featured": false,
     "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
