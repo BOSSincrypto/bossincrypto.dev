@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-13T02:26:08Z",
-    "pushedAt": "2026-08-13T02:26:04Z",
+    "updatedAt": "2026-08-13T07:43:13Z",
+    "pushedAt": "2026-08-13T07:42:47Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-13T01:25:55Z",
-    "pushedAt": "2026-08-13T01:25:51Z",
+    "updatedAt": "2026-08-13T07:20:03Z",
+    "pushedAt": "2026-08-13T07:18:39Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -540,6 +540,37 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1332937381,
+    "name": "veloxplay",
+    "displayName": "Veloxplay",
+    "description": "Latency-first Android video player: global playback speed, picture-in-picture, instant seeking. Media3 1.11, ~4.2 MB APK.",
+    "htmlUrl": "https://github.com/BOSSincrypto/veloxplay",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [
+      "android",
+      "exoplayer",
+      "kotlin",
+      "media3",
+      "performance",
+      "picture-in-picture",
+      "video-player"
+    ],
+    "category": "mobile-apps",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-13T09:27:56Z",
+    "updatedAt": "2026-08-13T11:14:59Z",
+    "pushedAt": "2026-08-13T11:15:29Z",
+    "featured": false,
+    "summary": "Latency-first Android video player: global playback speed, picture-in-picture, instant seeking. Media3 1.11, ~4.2 MB APK."
   },
   {
     "id": 1302022101,
