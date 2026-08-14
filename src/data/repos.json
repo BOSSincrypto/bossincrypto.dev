@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-14T07:41:04Z",
-    "pushedAt": "2026-08-14T07:40:45Z",
+    "updatedAt": "2026-08-14T13:19:54Z",
+    "pushedAt": "2026-08-14T13:18:49Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-14T07:17:15Z",
-    "pushedAt": "2026-08-14T07:16:53Z",
+    "updatedAt": "2026-08-14T12:54:49Z",
+    "pushedAt": "2026-08-14T12:53:29Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -540,6 +540,29 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1334336219,
+    "name": "NitroVideo",
+    "displayName": "NitroVideo",
+    "description": "Ultra-fast Android video player with gesture controls, PiP mode, and variable playback speed",
+    "htmlUrl": "https://github.com/BOSSincrypto/NitroVideo",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-14T15:46:13Z",
+    "updatedAt": "2026-08-14T16:21:36Z",
+    "pushedAt": "2026-08-14T16:28:00Z",
+    "featured": false,
+    "summary": "Ultra-fast Android video player with gesture controls, PiP mode, and variable playback speed"
   },
   {
     "id": 1334024068,
