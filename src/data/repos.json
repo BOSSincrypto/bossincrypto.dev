@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-13T13:26:11Z",
-    "pushedAt": "2026-08-13T13:24:55Z",
+    "updatedAt": "2026-08-13T19:10:16Z",
+    "pushedAt": "2026-08-13T19:10:00Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-13T12:58:00Z",
-    "pushedAt": "2026-08-13T12:57:33Z",
+    "updatedAt": "2026-08-13T18:55:53Z",
+    "pushedAt": "2026-08-13T18:55:49Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -540,6 +540,29 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1333576972,
+    "name": "ZeroLagPlayer",
+    "displayName": "ZeroLagPlayer",
+    "description": "Low-latency native Android video player powered by Media3",
+    "htmlUrl": "https://github.com/BOSSincrypto/ZeroLagPlayer",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": "Apache-2.0",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-13T22:12:13Z",
+    "updatedAt": "2026-08-13T22:16:14Z",
+    "pushedAt": "2026-08-13T22:16:04Z",
+    "featured": false,
+    "summary": "Low-latency native Android video player powered by Media3"
   },
   {
     "id": 1332937381,
