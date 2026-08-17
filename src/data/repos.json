@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-16T12:50:06Z",
-    "pushedAt": "2026-08-16T12:50:01Z",
+    "updatedAt": "2026-08-16T18:37:37Z",
+    "pushedAt": "2026-08-16T18:36:45Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-16T12:28:23Z",
-    "pushedAt": "2026-08-16T12:28:15Z",
+    "updatedAt": "2026-08-16T18:20:45Z",
+    "pushedAt": "2026-08-16T18:20:32Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -559,8 +559,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-08-16T16:55:15Z",
-    "updatedAt": "2026-08-16T18:19:43Z",
-    "pushedAt": "2026-08-16T18:18:45Z",
+    "updatedAt": "2026-08-16T19:01:43Z",
+    "pushedAt": "2026-08-16T19:01:33Z",
     "featured": false,
     "summary": "Super-fast, minimal Android video player built on Media3 + Jetpack Compose. Picture-in-Picture, resume-from-position, global default playback speed, Material 3."
   },
@@ -1167,7 +1167,7 @@
     "forks": 0,
     "createdAt": "2026-07-26T20:45:29Z",
     "updatedAt": "2026-07-27T07:36:13Z",
-    "pushedAt": "2026-08-09T21:34:18Z",
+    "pushedAt": "2026-08-16T21:33:32Z",
     "featured": false,
     "summary": "Learn to write prompts that actually work — for Claude, GPT, Gemini, Llama and every other model you use."
   },
