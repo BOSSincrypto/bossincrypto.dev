@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-17T07:06:56Z",
-    "pushedAt": "2026-08-17T07:05:52Z",
+    "updatedAt": "2026-08-17T12:56:28Z",
+    "pushedAt": "2026-08-17T12:54:56Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-17T06:42:39Z",
-    "pushedAt": "2026-08-17T06:42:18Z",
+    "updatedAt": "2026-08-17T12:36:39Z",
+    "pushedAt": "2026-08-17T12:33:19Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -540,6 +540,29 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1337167954,
+    "name": "cherry-pro-minimax-player",
+    "displayName": "Cherry Pro Minimax Player",
+    "description": "A super-fast Android video player built with Jetpack Compose + Media3/ExoPlayer. Local MP4/M4V/MOV + HTTP/HLS/DASH streams, global playback speed 0.25x-4x, Picture-in-Picture, background audio, gesture controls, and an in-app performance benchmark.",
+    "htmlUrl": "https://github.com/BOSSincrypto/cherry-pro-minimax-player",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-17T12:53:35Z",
+    "updatedAt": "2026-08-17T16:22:57Z",
+    "pushedAt": "2026-08-17T16:26:39Z",
+    "featured": false,
+    "summary": "A super-fast Android video player built with Jetpack Compose + Media3/ExoPlayer. Local MP4/M4V/MOV + HTTP/HLS/DASH streams, global playback speed 0.25x-4x, Picture-in-Picture, background audio, gesture controls, and an in-app performance benchmark."
   },
   {
     "id": 1309830824,
