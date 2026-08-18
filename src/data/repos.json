@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-17T12:56:28Z",
-    "pushedAt": "2026-08-17T12:54:56Z",
+    "updatedAt": "2026-08-17T18:49:25Z",
+    "pushedAt": "2026-08-17T18:48:32Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-17T12:36:39Z",
-    "pushedAt": "2026-08-17T12:33:19Z",
+    "updatedAt": "2026-08-17T18:33:51Z",
+    "pushedAt": "2026-08-17T18:30:40Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -559,8 +559,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-08-17T12:53:35Z",
-    "updatedAt": "2026-08-17T16:22:57Z",
-    "pushedAt": "2026-08-17T16:26:39Z",
+    "updatedAt": "2026-08-17T20:03:32Z",
+    "pushedAt": "2026-08-17T20:06:07Z",
     "featured": false,
     "summary": "A super-fast Android video player built with Jetpack Compose + Media3/ExoPlayer. Local MP4/M4V/MOV + HTTP/HLS/DASH streams, global playback speed 0.25x-4x, Picture-in-Picture, background audio, gesture controls, and an in-app performance benchmark."
   },
@@ -1023,7 +1023,7 @@
     "forks": 0,
     "createdAt": "2026-08-10T10:04:22Z",
     "updatedAt": "2026-08-11T07:43:40Z",
-    "pushedAt": "2026-08-11T07:46:03Z",
+    "pushedAt": "2026-08-17T22:06:44Z",
     "featured": false,
     "summary": "Fast, minimal Android video player with global playback speed and Picture-in-Picture"
   },
