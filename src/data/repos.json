@@ -117,8 +117,8 @@
     "stars": 3,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-08-19T06:56:04Z",
-    "pushedAt": "2026-08-19T06:53:51Z",
+    "updatedAt": "2026-08-19T13:04:07Z",
+    "pushedAt": "2026-08-19T12:58:04Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -194,8 +194,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-08-19T06:35:04Z",
-    "pushedAt": "2026-08-19T06:34:50Z",
+    "updatedAt": "2026-08-19T12:37:42Z",
+    "pushedAt": "2026-08-19T12:35:23Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -540,6 +540,29 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1339609468,
+    "name": "travel-world",
+    "displayName": "Travel World",
+    "description": "Atlas: an interactive personal world travel tracker",
+    "htmlUrl": "https://github.com/BOSSincrypto/travel-world",
+    "homepage": "https://bossincrypto.github.io/travel-world/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [],
+    "category": "web-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-08-19T13:20:40Z",
+    "updatedAt": "2026-08-19T13:39:02Z",
+    "pushedAt": "2026-08-19T13:27:10Z",
+    "featured": false,
+    "summary": "Atlas: an interactive personal world travel tracker"
   },
   {
     "id": 1337167954,
