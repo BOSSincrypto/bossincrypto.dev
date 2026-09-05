@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-05T03:54:07Z",
-    "pushedAt": "2026-09-05T03:54:03Z",
+    "updatedAt": "2026-09-05T10:20:59Z",
+    "pushedAt": "2026-09-05T10:20:55Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -236,8 +236,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-05T02:34:45Z",
-    "pushedAt": "2026-09-05T02:34:41Z",
+    "updatedAt": "2026-09-05T09:51:15Z",
+    "pushedAt": "2026-09-05T09:51:12Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
