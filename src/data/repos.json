@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-13T15:58:57Z",
-    "pushedAt": "2026-09-13T15:58:53Z",
+    "updatedAt": "2026-09-13T20:35:48Z",
+    "pushedAt": "2026-09-13T20:35:44Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -236,8 +236,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-13T15:29:33Z",
-    "pushedAt": "2026-09-13T15:29:29Z",
+    "updatedAt": "2026-09-13T20:10:20Z",
+    "pushedAt": "2026-09-13T20:10:16Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -1345,7 +1345,7 @@
     "forks": 0,
     "createdAt": "2026-07-26T20:45:29Z",
     "updatedAt": "2026-07-27T07:36:13Z",
-    "pushedAt": "2026-08-23T21:33:50Z",
+    "pushedAt": "2026-09-13T21:33:23Z",
     "featured": false,
     "summary": "Learn to write prompts that actually work — for Claude, GPT, Gemini, Llama and every other model you use."
   },
