@@ -236,8 +236,8 @@
     "stars": 1,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-14T11:33:02Z",
-    "pushedAt": "2026-09-14T11:32:58Z",
+    "updatedAt": "2026-09-14T17:28:53Z",
+    "pushedAt": "2026-09-14T17:28:49Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -540,6 +540,29 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1302022101,
+    "name": "vuzora-site",
+    "displayName": "Vuzora Site",
+    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
+    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
+    "homepage": "http://vuzora.ru/",
+    "language": "JavaScript",
+    "languages": [
+      "JavaScript"
+    ],
+    "topics": [],
+    "category": "telegram-bots",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-15T20:41:10Z",
+    "updatedAt": "2026-09-14T18:40:00Z",
+    "pushedAt": "2026-09-14T18:39:54Z",
+    "featured": false,
+    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1309830824,
@@ -971,29 +994,6 @@
     "pushedAt": "2026-09-03T10:25:48Z",
     "featured": false,
     "summary": "Latency-first Android video player: global playback speed, picture-in-picture, instant seeking. Media3 1.11, ~4.2 MB APK."
-  },
-  {
-    "id": 1302022101,
-    "name": "vuzora-site",
-    "displayName": "Vuzora Site",
-    "description": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution.",
-    "htmlUrl": "https://github.com/BOSSincrypto/vuzora-site",
-    "homepage": "http://vuzora.ru/",
-    "language": "JavaScript",
-    "languages": [
-      "JavaScript"
-    ],
-    "topics": [],
-    "category": "telegram-bots",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-15T20:41:10Z",
-    "updatedAt": "2026-08-12T19:48:09Z",
-    "pushedAt": "2026-09-14T17:20:31Z",
-    "featured": false,
-    "summary": "Russian SEO-oriented marketing site for Vuzora — a Telegram bot that delivers university schedules. Static marketing pages for the product, university directory, and blog; CTAs open @vuzora_bot with start-param attribution."
   },
   {
     "id": 1332190494,
