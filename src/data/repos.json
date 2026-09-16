@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-15T21:06:36Z",
-    "pushedAt": "2026-09-15T21:06:32Z",
+    "updatedAt": "2026-09-16T04:17:48Z",
+    "pushedAt": "2026-09-16T04:17:44Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -201,45 +201,6 @@
     "pushedAt": "2026-07-06T21:48:32Z",
     "featured": false,
     "summary": "📊 Lightweight, privacy-first analytics for Telegram bots. Zero runtime dependencies. 22 metrics, Flask dashboard, funnels, DAU/WAU/MAU, GDPR-ready retention."
-  },
-  {
-    "id": 1300291907,
-    "name": "bossincrypto.dev",
-    "displayName": "Bossincrypto.dev",
-    "description": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion.",
-    "htmlUrl": "https://github.com/BOSSincrypto/bossincrypto.dev",
-    "homepage": "http://bossincrypto.dev/",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [
-      "bossincrypto",
-      "crypto",
-      "cyberpunk",
-      "framer-motion",
-      "github-api",
-      "hackathon",
-      "oss",
-      "portfolio",
-      "react",
-      "showcase",
-      "tailwindcss",
-      "terminal",
-      "typescript",
-      "vite",
-      "web3"
-    ],
-    "category": "crypto-web3",
-    "license": null,
-    "isFork": false,
-    "stars": 1,
-    "forks": 0,
-    "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-15T20:46:48Z",
-    "pushedAt": "2026-09-15T20:46:44Z",
-    "featured": false,
-    "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
   {
     "id": 1228701515,
@@ -540,6 +501,45 @@
     "pushedAt": "2026-01-27T13:43:01Z",
     "featured": false,
     "summary": ""
+  },
+  {
+    "id": 1300291907,
+    "name": "bossincrypto.dev",
+    "displayName": "Bossincrypto.dev",
+    "description": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion.",
+    "htmlUrl": "https://github.com/BOSSincrypto/bossincrypto.dev",
+    "homepage": "http://bossincrypto.dev/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "bossincrypto",
+      "crypto",
+      "cyberpunk",
+      "framer-motion",
+      "github-api",
+      "hackathon",
+      "oss",
+      "portfolio",
+      "react",
+      "showcase",
+      "tailwindcss",
+      "terminal",
+      "typescript",
+      "vite",
+      "web3"
+    ],
+    "category": "crypto-web3",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-14T09:42:19Z",
+    "updatedAt": "2026-09-16T07:54:16Z",
+    "pushedAt": "2026-09-16T02:58:18Z",
+    "featured": false,
+    "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
   {
     "id": 1302022101,
