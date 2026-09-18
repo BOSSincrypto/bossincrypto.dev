@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-18T10:57:42Z",
-    "pushedAt": "2026-09-18T10:57:38Z",
+    "updatedAt": "2026-09-18T16:11:45Z",
+    "pushedAt": "2026-09-18T16:11:40Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -536,8 +536,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-18T10:25:53Z",
-    "pushedAt": "2026-09-18T10:25:49Z",
+    "updatedAt": "2026-09-18T15:40:50Z",
+    "pushedAt": "2026-09-18T15:40:46Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -1014,7 +1014,7 @@
     "forks": 0,
     "createdAt": "2026-08-12T15:41:39Z",
     "updatedAt": "2026-08-12T16:09:15Z",
-    "pushedAt": "2026-08-31T08:15:24Z",
+    "pushedAt": "2026-09-18T19:06:11Z",
     "featured": false,
     "summary": "Fast, privacy-first Android video player powered by Media3"
   },
