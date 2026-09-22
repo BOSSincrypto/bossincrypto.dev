@@ -29,10 +29,10 @@
     "category": "developer-tools",
     "license": "MIT",
     "isFork": false,
-    "stars": 19,
+    "stars": 20,
     "forks": 1,
     "createdAt": "2026-05-29T21:23:23Z",
-    "updatedAt": "2026-09-21T01:49:49Z",
+    "updatedAt": "2026-09-22T15:15:06Z",
     "pushedAt": "2026-08-09T19:34:36Z",
     "featured": false,
     "summary": "Desktop GUI for microsoft/markitdown — convert PDF, Word, Excel, PowerPoint, images & audio to Markdown. Windows · macOS · Linux. No cloud."
@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-22T04:17:47Z",
-    "pushedAt": "2026-09-22T04:17:44Z",
+    "updatedAt": "2026-09-22T11:19:30Z",
+    "pushedAt": "2026-09-22T11:19:25Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -503,6 +503,29 @@
     "summary": ""
   },
   {
+    "id": 1298282383,
+    "name": "PinMe",
+    "displayName": "PinMe",
+    "description": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров.",
+    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
+    "homepage": null,
+    "language": "Kotlin",
+    "languages": [
+      "Kotlin"
+    ],
+    "topics": [],
+    "category": "mobile-apps",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-12T12:57:14Z",
+    "updatedAt": "2026-09-22T15:20:07Z",
+    "pushedAt": "2026-09-22T15:20:03Z",
+    "featured": false,
+    "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
+  },
+  {
     "id": 1300291907,
     "name": "bossincrypto.dev",
     "displayName": "Bossincrypto.dev",
@@ -536,8 +559,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-22T02:57:11Z",
-    "pushedAt": "2026-09-22T02:57:07Z",
+    "updatedAt": "2026-09-22T10:49:11Z",
+    "pushedAt": "2026-09-22T10:49:07Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -1181,29 +1204,6 @@
     "pushedAt": "2026-08-31T22:07:15Z",
     "featured": false,
     "summary": "Fast, minimal Android video player with global playback speed and Picture-in-Picture"
-  },
-  {
-    "id": 1298282383,
-    "name": "PinMe",
-    "displayName": "PinMe",
-    "description": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров.",
-    "htmlUrl": "https://github.com/BOSSincrypto/PinMe",
-    "homepage": null,
-    "language": "Kotlin",
-    "languages": [
-      "Kotlin"
-    ],
-    "topics": [],
-    "category": "mobile-apps",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-12T12:57:14Z",
-    "updatedAt": "2026-08-05T09:57:22Z",
-    "pushedAt": "2026-09-13T04:13:13Z",
-    "featured": false,
-    "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
   },
   {
     "id": 1303782396,
