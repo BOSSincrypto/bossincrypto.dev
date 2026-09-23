@@ -29,10 +29,10 @@
     "category": "developer-tools",
     "license": "MIT",
     "isFork": false,
-    "stars": 20,
+    "stars": 21,
     "forks": 1,
     "createdAt": "2026-05-29T21:23:23Z",
-    "updatedAt": "2026-09-22T15:15:06Z",
+    "updatedAt": "2026-09-23T00:11:36Z",
     "pushedAt": "2026-08-09T19:34:36Z",
     "featured": false,
     "summary": "Desktop GUI for microsoft/markitdown — convert PDF, Word, Excel, PowerPoint, images & audio to Markdown. Windows · macOS · Linux. No cloud."
@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-22T16:41:46Z",
-    "pushedAt": "2026-09-22T16:41:41Z",
+    "updatedAt": "2026-09-22T21:07:53Z",
+    "pushedAt": "2026-09-22T21:07:24Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -536,8 +536,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-22T16:07:45Z",
-    "pushedAt": "2026-09-22T16:07:41Z",
+    "updatedAt": "2026-09-22T20:47:00Z",
+    "pushedAt": "2026-09-22T20:46:56Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -1060,7 +1060,7 @@
     "forks": 0,
     "createdAt": "2026-08-12T13:37:25Z",
     "updatedAt": "2026-08-12T13:56:22Z",
-    "pushedAt": "2026-09-16T02:26:29Z",
+    "pushedAt": "2026-09-23T02:26:39Z",
     "featured": false,
     "summary": "Ultra-responsive Android video player with global speed, PiP, Media3, benchmarks, and secure automated releases."
   },
