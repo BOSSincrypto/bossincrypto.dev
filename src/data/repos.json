@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-26T11:09:03Z",
-    "pushedAt": "2026-09-26T11:08:59Z",
+    "updatedAt": "2026-09-26T20:54:50Z",
+    "pushedAt": "2026-09-26T20:54:46Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -533,6 +533,38 @@
     "summary": ""
   },
   {
+    "id": 1313153294,
+    "name": "one-sentence-telegram-summary-bot",
+    "displayName": "One Sentence Telegram Summary Bot",
+    "description": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание.",
+    "htmlUrl": "https://github.com/BOSSincrypto/one-sentence-telegram-summary-bot",
+    "homepage": null,
+    "language": "Python",
+    "languages": [
+      "Python"
+    ],
+    "topics": [
+      "aiogram",
+      "channeldigest",
+      "digestbot",
+      "newsdigest",
+      "onesentencesummary",
+      "python",
+      "telegrambot",
+      "telegramchannelsummary"
+    ],
+    "category": "telegram-bots",
+    "license": "MIT",
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-26T20:52:09Z",
+    "updatedAt": "2026-09-26T16:37:45Z",
+    "pushedAt": "2026-09-26T16:37:40Z",
+    "featured": false,
+    "summary": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание."
+  },
+  {
     "id": 1300291907,
     "name": "bossincrypto.dev",
     "displayName": "Bossincrypto.dev",
@@ -566,8 +598,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-26T10:40:48Z",
-    "pushedAt": "2026-09-26T10:40:45Z",
+    "updatedAt": "2026-09-26T15:35:46Z",
+    "pushedAt": "2026-09-26T15:35:42Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -916,38 +948,6 @@
     "pushedAt": "2026-07-27T16:26:31Z",
     "featured": false,
     "summary": "llmverify is a lightweight Python tool for externally auditing LLM APIs and verifying whether custom providers and resellers truly serve the frontier models they claim to run, using layered probes and benchmark-based statistics."
-  },
-  {
-    "id": 1313153294,
-    "name": "one-sentence-telegram-summary-bot",
-    "displayName": "One Sentence Telegram Summary Bot",
-    "description": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание.",
-    "htmlUrl": "https://github.com/BOSSincrypto/one-sentence-telegram-summary-bot",
-    "homepage": null,
-    "language": "Python",
-    "languages": [
-      "Python"
-    ],
-    "topics": [
-      "aiogram",
-      "channeldigest",
-      "digestbot",
-      "newsdigest",
-      "onesentencesummary",
-      "python",
-      "telegrambot",
-      "telegramchannelsummary"
-    ],
-    "category": "telegram-bots",
-    "license": "MIT",
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-26T20:52:09Z",
-    "updatedAt": "2026-07-27T12:45:24Z",
-    "pushedAt": "2026-08-04T23:31:13Z",
-    "featured": false,
-    "summary": "Читает публичные Telegram-каналы, сжимает каждый пост за сутки в одно предложение со ссылкой на оригинал и присылает готовый дайджест в нужную тему супергруппы. Всё настраивается прямо в боте: каналы, группы каналов, получатели, модель ИИ, фильтры, расписание."
   },
   {
     "id": 1313149224,
