@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-09-28T13:28:17Z",
-    "pushedAt": "2026-09-28T13:28:12Z",
+    "updatedAt": "2026-09-28T23:07:26Z",
+    "pushedAt": "2026-09-28T23:07:23Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -569,6 +569,45 @@
     "summary": ""
   },
   {
+    "id": 1300291907,
+    "name": "bossincrypto.dev",
+    "displayName": "Bossincrypto.dev",
+    "description": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion.",
+    "htmlUrl": "https://github.com/BOSSincrypto/bossincrypto.dev",
+    "homepage": "http://bossincrypto.dev/",
+    "language": "TypeScript",
+    "languages": [
+      "TypeScript"
+    ],
+    "topics": [
+      "bossincrypto",
+      "crypto",
+      "cyberpunk",
+      "framer-motion",
+      "github-api",
+      "hackathon",
+      "oss",
+      "portfolio",
+      "react",
+      "showcase",
+      "tailwindcss",
+      "terminal",
+      "typescript",
+      "vite",
+      "web3"
+    ],
+    "category": "crypto-web3",
+    "license": null,
+    "isFork": false,
+    "stars": 0,
+    "forks": 0,
+    "createdAt": "2026-07-14T09:42:19Z",
+    "updatedAt": "2026-09-28T22:52:28Z",
+    "pushedAt": "2026-09-28T22:52:24Z",
+    "featured": false,
+    "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
+  },
+  {
     "id": 1302022101,
     "name": "vuzora-site",
     "displayName": "Vuzora Site",
@@ -628,45 +667,6 @@
     "pushedAt": "2026-09-28T16:40:46Z",
     "featured": false,
     "summary": "The Unified LLM Leaderboard — all major AI model rankings (8 leaderboards, 38+ models) in one interactive dashboard with composite scoring, value analysis & comparison. Data as of 20.07.2026."
-  },
-  {
-    "id": 1300291907,
-    "name": "bossincrypto.dev",
-    "displayName": "Bossincrypto.dev",
-    "description": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion.",
-    "htmlUrl": "https://github.com/BOSSincrypto/bossincrypto.dev",
-    "homepage": "http://bossincrypto.dev/",
-    "language": "TypeScript",
-    "languages": [
-      "TypeScript"
-    ],
-    "topics": [
-      "bossincrypto",
-      "crypto",
-      "cyberpunk",
-      "framer-motion",
-      "github-api",
-      "hackathon",
-      "oss",
-      "portfolio",
-      "react",
-      "showcase",
-      "tailwindcss",
-      "terminal",
-      "typescript",
-      "vite",
-      "web3"
-    ],
-    "category": "crypto-web3",
-    "license": null,
-    "isFork": false,
-    "stars": 0,
-    "forks": 0,
-    "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-09-28T12:42:11Z",
-    "pushedAt": "2026-09-28T12:42:07Z",
-    "featured": false,
-    "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
   {
     "id": 1313153294,
