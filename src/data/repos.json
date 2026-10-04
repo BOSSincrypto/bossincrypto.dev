@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-10-03T20:52:46Z",
-    "pushedAt": "2026-10-03T20:52:42Z",
+    "updatedAt": "2026-10-04T05:18:23Z",
+    "pushedAt": "2026-10-04T05:18:19Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -602,8 +602,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-10-03T20:30:01Z",
-    "pushedAt": "2026-10-03T20:29:57Z",
+    "updatedAt": "2026-10-04T03:55:31Z",
+    "pushedAt": "2026-10-04T03:55:27Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
@@ -830,7 +830,7 @@
     "forks": 0,
     "createdAt": "2026-07-12T12:57:14Z",
     "updatedAt": "2026-09-22T15:20:07Z",
-    "pushedAt": "2026-09-22T15:20:03Z",
+    "pushedAt": "2026-10-04T04:13:01Z",
     "featured": false,
     "summary": "PinMe — Android-приложение для локального хранения контактов, дат, напоминаний и истории разговоров."
   },
