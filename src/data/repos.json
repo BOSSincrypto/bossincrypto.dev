@@ -117,8 +117,8 @@
     "stars": 4,
     "forks": 0,
     "createdAt": "2026-01-12T19:44:28Z",
-    "updatedAt": "2026-10-06T05:49:35Z",
-    "pushedAt": "2026-10-06T05:49:32Z",
+    "updatedAt": "2026-10-06T13:08:17Z",
+    "pushedAt": "2026-10-06T13:08:13Z",
     "featured": false,
     "summary": "AI-powered news aggregator that ranks world news by real-world significance. Open-source, auto-updated via GitHub Actions, hosted on GitHub Pages."
   },
@@ -575,9 +575,9 @@
     "description": "",
     "htmlUrl": "https://github.com/BOSSincrypto/BOSSgram",
     "homepage": null,
-    "language": "Java",
+    "language": "Python",
     "languages": [
-      "Java"
+      "Python"
     ],
     "topics": [],
     "category": "utilities",
@@ -586,8 +586,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-10-05T19:42:49Z",
-    "updatedAt": "2026-10-06T12:18:41Z",
-    "pushedAt": "2026-10-06T12:18:36Z",
+    "updatedAt": "2026-10-06T17:13:08Z",
+    "pushedAt": "2026-10-06T17:13:03Z",
     "featured": false,
     "summary": ""
   },
@@ -625,8 +625,8 @@
     "stars": 0,
     "forks": 0,
     "createdAt": "2026-07-14T09:42:19Z",
-    "updatedAt": "2026-10-06T04:27:57Z",
-    "pushedAt": "2026-10-06T04:27:53Z",
+    "updatedAt": "2026-10-06T12:37:48Z",
+    "pushedAt": "2026-10-06T12:37:43Z",
     "featured": false,
     "summary": "⚡ Hacker-terminal project hub — live portfolio of all BOSSincrypto open-source repos. CRT aesthetic, matrix rain, real-time GitHub data. Built with React 19 + Vite + Framer Motion."
   },
